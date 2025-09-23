@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // STATIC ACCESS CONTROL SETUP
 //////////////////////////////////////////////////////
 
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // app.use("/", express.static("public", {
 //     setHeaders: (res, path) => {
