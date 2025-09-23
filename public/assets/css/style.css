@@ -1,0 +1,196 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+    flex: 1 0 auto;
+    /* grow and shrink as needed */
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* For Dark Mode */
+body.bs-dark-theme {
+    background-color: #212529 !important; /* Bootstrap dark background */
+}
+
+/* Navbar */
+/* Make navbar items wrap in 3 columns on xs / mobile */
+/* Mobile (xs): 3 columns */
+/* Grid for small and medium screens */
+
+#mainNavbar {
+    min-height: 80px;
+}
+
+#mainNavbar .navbar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* Medium (sm & up): 6 columns */
+@media screen and (min-width: 576px) {
+    #mainNavbar .navbar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large (lg & up): revert to flex row */
+@media screen and (min-width: 992px) {
+    #mainNavbar .navbar-grid {
+        display: flex !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+    }
+
+    #mainNavbar .navbar-grid .nav-link {
+        text-align: left;
+    }
+}
+
+#mainNavbar .navbar-grid .nav-item {
+    list-style: none;
+}
+
+#mainNavbar .navbar-grid .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#mainNavbar .navbar-grid .dropdown-menu {
+    min-width: 100% !important;
+}
+
+/* Make all navbar links inside #mainNavbar black */
+#mainNavbar a.nav-link,
+#mainNavbar .dropdown-menu a.dropdown-item {
+  color: rgba(0, 0, 0, 0.71) !important;
+}
+
+#mainNavbar a.nav-link.active,
+#mainNavbar .dropdown-menu a.dropdown-item.active {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+/*
+=====================
+Dropdown Styling
+=====================
+*/
+
+/* Dropdown styling */
+
+/* Keep profile image centered and aligned in mobile view */
+#mainNavbar .nav-item.dropdown .nav-link.dropdown-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Large (Tablet) and above */
+@media screen and (min-width: 992px) {
+
+    #mainNavbar .dropdown-menu {
+        background-color: #7de37c;
+        border: none;
+        border-radius: 0.75rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        padding: 0.5rem 0;
+        width: max-content;
+        min-width: 240px;
+        max-width: 300px;
+        left: 50% !important;
+        transform: translateX(-50%);
+        white-space: normal;
+        word-wrap: break-word;
+        z-index: 1050;
+    }
+
+    /* Make sure dropdown aligns correctly */
+    #mainNavbar .nav-item.dropdown {
+        position: relative;
+    }
+}
+
+
+@media screen and (max-width: 991.98px) {
+    #mainNavbar .navbar-collapse.show .dropdown-menu {
+        position: static !important;       /* No absolute positioning */
+        left: auto !important;             /* Undo left: 50% */
+        transform: none !important;        /* Undo translateX */
+        width: 100% !important;            /* Full width to avoid overflow */
+        box-shadow: none !important;       /* Optional: cleaner look on mobile */
+        background-color: #89d298;         /* Keep your color */
+        border-radius: 0;                  /* Optional: cleaner stacked look */
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+/* Dropdown item text wrapping */
+#mainNavbar .dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #004d61;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    transition: background-color 0.2s ease;
+    border-radius: 0.375rem;
+    white-space: normal;
+}
+
+/* Hover effect */
+#mainNavbar .dropdown-item:hover {
+    background-color: #2b9a36;
+    color: #ffffff;
+}
+
+/* For a selected navbar item */
+#mainNavbar .dropdown-item.active, 
+#mainNavbar .dropdown-item.selected {
+    background-color: #147619; /* A deeper green */
+    color: #ffffff;            /* White text */
+}
+
+#mainNavbar .dropdown-item.active:hover, 
+#mainNavbar .dropdown-item.selected:hover {
+    background-color: #1b6f18;
+    color: #ffffff;
+}
+
+/* Divider spacing */
+#mainNavbar .dropdown-divider {
+    margin: 0.25rem 0;
+}
+
+footer {
+    margin-top: auto;
+    /* push footer to bottom if content is short */
+}
+
+.icon-large {
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.icon-small {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}

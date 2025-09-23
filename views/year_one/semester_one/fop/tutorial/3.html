@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FOP - Tutorial</title>
+
+        <!-- BS5 -->
+        <script src="/assets/js/general/injectBootstrap.js" type="text/javascript" defer></script>
+
+        <!-- Custom Elements -->
+        <script src="/assets/js/general/injectNavbar.js" type="text/javascript" defer></script>
+        <script src="/assets/js/general/injectFooter.js" type="text/javascript" defer></script>
+
+        <script src="/assets/js/general/injectCustom.js" type="text/javascript" defer></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/general/prism.css">
+        <link rel="stylesheet" href="/assets/css/fop/navigation.css">
+        <link rel="stylesheet" href="/assets/css/fop/tutorial.css">
+        <link rel="stylesheet" href="/assets/css/fop/practical.css">
+
+        <!-- Custom JS -->
+        <script src="/assets/js/general/prism.js" type="text/javascript" defer></script>
+        <script src="/assets/js/fop/navigation.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <main class="page-content">
+            <div class="container-lg">
+                <div class="row mt-3">
+                    <!-- Left side navigation -->
+                    <div id="fop-sidebar"></div>
+
+                    <div class="col-md-9 col-sm-12 mt-3">
+                        <h2 class="fw-bold">
+                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 3 - Operator Precedence
+                        </h2>
+                        <hr>
+                        <div class="table-responsive mt-5">
+                            <table class="table table-bordered table-striped table-hover align-middle">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Val</th>
+                                        <th>Operator</th>
+                                        <th>Description</th>
+                                        <th>Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>( )</td>
+                                        <td>Expression Grouping</td>
+                                        <td>(100 + 50) * 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>.</td>
+                                        <td>Member Of</td>
+                                        <td>person.name</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>[]</td>
+                                        <td>Member Of</td>
+                                        <td>person["name"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>?.</td>
+                                        <td>Optional Chaining ES2020</td>
+                                        <td>x ?. y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>()</td>
+                                        <td>Function Call</td>
+                                        <td>myFunction()</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>new</td>
+                                        <td>New with Arguments</td>
+                                        <td>new Date("June 5,2022")</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>new</td>
+                                        <td>New without Arguments</td>
+                                        <td>new Date()</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Increment Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>++</td>
+                                        <td>Postfix Increment</td>
+                                        <td>i++</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>--</td>
+                                        <td>Postfix Decrement</td>
+                                        <td>i--</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>++</td>
+                                        <td>Prefix Increment</td>
+                                        <td>++i</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>--</td>
+                                        <td>Prefix Decrement</td>
+                                        <td>--i</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">NOT Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>!</td>
+                                        <td>Logical NOT</td>
+                                        <td>!(x==y)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>~</td>
+                                        <td>Bitwise NOT</td>
+                                        <td>~x</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Unary Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>+</td>
+                                        <td>Unary Plus</td>
+                                        <td>+x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>-</td>
+                                        <td>Unary Minus</td>
+                                        <td>-x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>typeof</td>
+                                        <td>Data Type</td>
+                                        <td>typeof x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>void</td>
+                                        <td>Evaluate Void</td>
+                                        <td>void(0)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>delete</td>
+                                        <td>Property Delete</td>
+                                        <td>delete myCar.color</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Arithemetic Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>**</td>
+                                        <td>Exponentiation ES2016</td>
+                                        <td>10 ** 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>*</td>
+                                        <td>Multiplication</td>
+                                        <td>10 * 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>/</td>
+                                        <td>Division</td>
+                                        <td>10 / 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>%</td>
+                                        <td>Division Remainder</td>
+                                        <td>10 % 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>+</td>
+                                        <td>Addition</td>
+                                        <td>10 + 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>-</td>
+                                        <td>Subtraction</td>
+                                        <td>10 - 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>+</td>
+                                        <td>Concatenation</td>
+                                        <td>"John" + "Doe"</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Shift Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>&lt;&lt;</td>
+                                        <td>Shift Left</td>
+                                        <td>x &lt;&lt; 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>&gt;&gt;</td>
+                                        <td>Shift Right (signed)</td>
+                                        <td>x &gt;&gt; 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>&gt;&gt;&gt;</td>
+                                        <td>Shift Right (unsigned)</td>
+                                        <td>x &gt;&gt;&gt; 2</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Relational Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>in</td>
+                                        <td>Property in Object</td>
+                                        <td>"PI" in Math</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>instanceof</td>
+                                        <td>Instance of Object</td>
+                                        <td>x instanceof Array</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Comparison Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>&lt;</td>
+                                        <td>Less than</td>
+                                        <td>x &lt; y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>&lt;=</td>
+                                        <td>Less than or equal</td>
+                                        <td>x &lt;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>&gt;</td>
+                                        <td>Greater than</td>
+                                        <td>x &gt; y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>&gt;=</td>
+                                        <td>Greater than or equal</td>
+                                        <td>x &gt;= Array</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>==</td>
+                                        <td>Equal</td>
+                                        <td>x == y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>===</td>
+                                        <td>Strict equal</td>
+                                        <td>x === y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>!=</td>
+                                        <td>Unequal</td>
+                                        <td>x != y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>!==</td>
+                                        <td>Strict unequal</td>
+                                        <td>x !== y</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Bitwise Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>&amp;</td>
+                                        <td>Bitwise AND</td>
+                                        <td>x &amp; y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>^</td>
+                                        <td>Bitwise XOR</td>
+                                        <td>x ^ y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>|</td>
+                                        <td>Bitwise OR</td>
+                                        <td>x | y</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Logical Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>&amp;&amp;</td>
+                                        <td>Logical AND</td>
+                                        <td>x &amp;&amp; y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>||</td>
+                                        <td>Logical OR</td>
+                                        <td>x || y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>??</td>
+                                        <td>Nullish Coalescing ES2020</td>
+                                        <td>x ?? y</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Conditional (ternary) Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>? :</td>
+                                        <td>Condition</td>
+                                        <td>? "yes" : "no"</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Assignment Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>=</td>
+                                        <td>Simple Assignment</td>
+                                        <td>x = y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>:</td>
+                                        <td>Colon Assignment</td>
+                                        <td>x: 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>+=</td>
+                                        <td>Addition Assignment</td>
+                                        <td>x += y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>-=</td>
+                                        <td>Subtraction Assignment</td>
+                                        <td>x -= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>*=</td>
+                                        <td>Multiplication Assignment</td>
+                                        <td>x *= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>**=</td>
+                                        <td>Exponentiation Assignment</td>
+                                        <td>x **= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>/=</td>
+                                        <td>Division Assignment</td>
+                                        <td>x /= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>%=</td>
+                                        <td>Remainder Assignment</td>
+                                        <td>x %= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>&lt;&lt;=</td>
+                                        <td>Left Shift Assignment</td>
+                                        <td>x &lt;&lt;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>&gt;&gt;=</td>
+                                        <td>Right Shift Assignment</td>
+                                        <td>x &gt;&gt;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>&gt;&gt;&gt;=</td>
+                                        <td>Unsigned Right Shift</td>
+                                        <td>x &gt;&gt;&gt;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>&amp;=</td>
+                                        <td>Bitwise AND Assignment</td>
+                                        <td>x &amp;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>|=</td>
+                                        <td>Bitwise OR Assignment</td>
+                                        <td>x |= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>^=</td>
+                                        <td>Bitwise XOR Assignment</td>
+                                        <td>x ^= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>&amp;&amp;=</td>
+                                        <td>Logical AND Assignment</td>
+                                        <td>x &amp;&amp;= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>||=</td>
+                                        <td>Logical OR Assignment</td>
+                                        <td>x ||= y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>=&gt;</td>
+                                        <td>Arrow</td>
+                                        <td>x =&gt; y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>yield</td>
+                                        <td>Pause / Resume</td>
+                                        <td>yield x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>yield*</td>
+                                        <td>Delegate</td>
+                                        <td>yield* x</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>...</td>
+                                        <td>Spread</td>
+                                        <td>...x</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <td colspan="4" class="p-1 text-center h3">Comma Operators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>,</td>
+                                        <td>Comma</td>
+                                        <td>x , y</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-end fst-italic small text-muted">
+                            Source: W3Schools
+                        </div>
+
+                        <h2 class="fw-bold mt-5">Practical 2 - Operators</h2>
+                        <hr>
+
+                        <h5 class="mt-4 mb-2">Questions:</h5>
+                        <embed src="/assets/documents/fop/prac_2/questions.pdf">
+
+                        <h5 class="mt-5">Answer Key:</h5>
+                        <pre class="line-numbers">
+                            <code class="language-javascript">
+                            /*
+                            ==============================
+                            Question 1
+                            ==============================
+                            */
+
+                            // Ensure you find the value of variable **a1**
+
+                            // (a)
+                            // Ans: 4
+
+                            // (b)
+                            // Ans: 1.4285714285714286
+
+                            // (c)
+                            // Ans: 2
+
+                            // (d)
+                            // Ans: 10
+
+                            // (e)
+                            // Ans: 7
+
+                            // (f)
+                            // Ans: 2.666666666666667
+
+                            // (g)
+                            // Ans: 53.9
+
+                            // (h)
+                            // Ans: 81
+
+
+                            /*
+                            ==============================
+                            Question 2
+                            ==============================
+                            */
+
+                            // (a)
+                            // Ans: 101
+
+                            // (b)
+                            // Ans: FOPisfun!
+
+                            // (c)
+                            // Ans: 1abcd
+
+                            // (d)
+                            // Ans: abcd 1
+
+                            // (e)
+                            // Ans: 9 abcd
+
+                            // (f)
+                            // Ans: 1 abcd 1
+
+                            // (g)
+                            // Ans: abcd 11
+
+                            // (h)
+                            // Ans: 1ab2
+
+
+                            /*
+                            ==============================
+                            Question 3
+                            ==============================
+                            */
+
+                            // (a)
+                            // Ans: false
+
+                            // (b)
+                            // Ans: true
+
+                            // (c)
+                            // Ans: false
+
+                            // (d)
+                            // Ans: true
+
+                            // (e)
+                            // Ans: true
+
+                            // (f)
+                            // Ans: true
+
+                            // (g)
+                            // Ans: true
+
+                            // (h)
+                            // Ans: true
+
+                            // (i)
+                            // Ans: false
+
+                            /*
+                            ==============================
+                            Question 4
+                            ==============================
+                            */
+
+                            /* Ans:
+
+                            true
+                            false
+                            true
+                            true
+                            a1 = 2
+                            a2 = 2
+                            a3 = 3
+
+                            */
+
+
+                            /*
+                            ==============================
+                            Question 5
+                            ==============================
+                            */
+
+                            // (a)
+                            // Ans: It has a quotation mark prefixing the variable name
+
+
+                            // (b)
+                            // Ans: No errors, Infinity will be output
+
+                            // (c)
+                            // Ans: Since pi variable is a contant variable, value cannot be changed
+
+                            /*
+                            ==============================
+                            Question 6
+                            ==============================
+                            */
+
+                            // (a) 
+                            // Ans: b
+
+                            // (b)
+                            /* Ans:
+
+                            c
+                            d
+                            e
+
+                            */
+
+
+                            // (c)
+                            /* Ans:
+                            f
+                            g
+                            */
+
+
+                            /*
+                            ==============================
+                            Question 7
+                            ==============================
+                            */
+
+                            let x = 20;
+                            let y = 5;
+                            let z  = x * y;
+
+                            console.log(`
+                            x: ${x}
+                            y: ${y}
+                            z: ${z}
+                            `)
+
+                            /*
+                            ==============================
+                            Question 8
+                            ==============================
+                            */
+
+                            // (a)
+                            const reader = require("readline-sync");
+
+                            let name, color;
+                            do {
+                                name = reader.question("Enter your name: ");
+                            } while(name.length === 0);
+
+                            console.log(name + " loves Programming!");
+
+                            // (b)
+
+                            // Code is continued from (a) as one whole program
+                            do {
+                                color = reader.question("Enter your favorite color: ");
+                            } while (color.length === 0)
+
+                            console.log(name + " loves Programming & " + color + " color");
+
+
+                            /*
+                            ==============================
+                            Question 9
+                            ==============================
+                            */
+                            const q = require("readline-sync");
+
+                            let fa;
+                            let cel;
+
+                            do {
+
+                                fa = Number(q.question("Enter Temperature in Fahrenheit: "));
+                                // check fa first
+
+                                if (Number.isNaN(fa)) {
+
+                                    console.log("It is not a number!");
+                                    continue;
+
+                                } else {
+
+                                    cel = 5/9*(fa-32);
+
+                                    if (cel <20 || cel >25) {
+
+                                        console.log("It is not in the range");
+                                        continue;
+                                    } else {
+                                        break;
+                                    }
+                                }
+
+                            } while(true);
+
+                            console.log(`The current room temperature is ${cel} degrees Celcius`);
+
+
+
+                            /*
+                            ==============================
+                            Question 10
+                            ==============================
+                            */
+                            const scanner = require(`readline-sync`);
+
+                            let xx;
+                            let yy;
+
+                            do {
+                                x = scanner.question("Enter First number: ");
+                            } while (
+                                Number.isNaN(Number(xx)) || 
+                                xx === null || 
+                                xx.length == 0
+                            );
+
+                            do {
+
+                                yy = scanner.question("Enter Second Number: ");
+
+                            } while (
+                                Number.isNaN(Number(y)) || 
+                                yy === null ||
+                                yy.length == 0
+                            );
+
+                            xx = Number(x);
+                            yy = Number(y);
+
+                            console.log(`
+                            ${x} + ${y} = ${(x+y)}
+                            ${x} is divisible by ${y}? ${x%y==0}`);
+
+                            /*
+                            ==============================
+                            Question 11
+                            ==============================
+                            */
+
+                            let year1 = 1996;
+                            let year2 = 1900;
+
+                            let isLeapYear;
+
+                            function evalYear(year) {
+
+                                isLeapYear = year % 4 === 0 && year % 100 !== 0 || year%400 === 0;
+
+                                console.log(year + " is a leap year? " + isLeapYear);
+                            }
+
+                            evalYear(year1);
+                            evalYear(year2);
+
+                            /*
+                            ==============================
+                            Question 12
+                            ==============================
+                            */
+
+                            const scanner = require("readline-sync");
+
+                            let username;
+                            let salary;
+
+                            do {
+
+                                username = scanner.question("Enter your name: ");
+
+                            } while(username === null || 
+                                username === undefined || 
+                                username.length === 0);
+
+                            console.log(`Hello ${username}!`);
+
+                            do {
+
+                                salary = scanner.question("Please enter your current salary: ");
+                                salary = salary.replaceAll("$","");
+
+
+                            } while(salary === null || 
+                                salary === undefined || 
+                                salary.length == 0 || 
+                                Number.isNaN(Number(salary) ||
+                                Number(salary) == 0
+                            ));
+
+                            salary = Number(salary);
+                            let newsalary = salary;
+
+                            switch (true) {
+
+                                case (newsalary<1000):
+
+                                newsalary += (0.2*newsalary);
+
+                                case (newsalary<2000 && newsalary>1000):
+
+                                newsalary += (newsalary*0.15);
+
+                                case (newsalary >= 2000):
+
+                                newsalary += (newsalary*0.1);
+                            }
+
+                            console.log(`
+                            Here\'s the result....
+                            Current Salary     Increment     New Salary
+                            ${salary}              ${newsalary-salary}           ${newsalary}  
+                            `);
+
+
+                            /*
+                            ==============================
+                            Question 13
+                            ==============================
+                            */
+
+                            const scanner = require("readline-sync");
+
+                            let x1;
+                            let y1;
+                            let x2;
+                            let y2;
+                            let distance = 0;
+
+                            do {
+                                x1 = Number(scanner.question("x1: "));
+                                if (Number.isNaN(x1)) {
+                                    console.log("Invalid Input of x1");
+                                    continue;
+                                }
+                                y1 = Number(scanner.question("y1: "));
+                                if (Number.isNaN(y1)) {
+                                    console.log("Invalid Input of y1");
+                                    continue;
+                                }
+                                x2 = Number(scanner.question("x2: "));
+                                if (Number.isNaN(x2)) {
+                                    console.log("Invalid Input of x2");
+                                    continue;
+                                }
+                                y2 = Number(scanner.question("y2: "));
+                                if (Number.isNaN(x2)) {
+                                    console.log("Invalid Input of y2");
+                                    continue;
+                                }
+
+                                distance = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+                                break;
+                            } while (true);
+
+                            console.log(distance);
+
+
+                            /*
+                            ==============================
+                            Question 14
+                            ==============================
+                            */
+
+                            const scanner = require("readline-sync");
+
+                            let theta1;
+                            let theta2;
+
+                            do {
+
+                            theta1 = Number(scanner.question("First Angle: "));
+                            theta2 = Number(scanner.question("Second Angle: "));
+
+                                if (theta1 + theta2 >= 180 || theta1 == 0 || theta2 == 0 
+                                    || Number.isNaN(theta1) || Number.isNaN(theta2)) {
+
+                                    console.log("Invalid values");
+                                    continue;
+                                } else {
+
+                                    console.log(`Third angle is ${180 - theta1 - theta2} deegrees`);
+
+                                    break;
+                                }
+
+                            } while (true);
+
+                            /*
+                            ==============================
+                            Question 15
+                            ==============================
+                            */
+
+                            const q = require("readline-sync");
+
+                            let value = Number(q.question("Enter Amount ($): "));
+
+
+                            if (value < 0 || Number.isNaN(value) || !Number.isInteger(value)) {
+
+                                console.log("Invalid Value: Make sure its an integer");
+
+                            } else {
+                                let thousands = parseInt(value / 1000);
+                                let remainder = value % 1000;
+
+
+                                let hundreds = parseInt(remainder / 100);
+                                remainder = remainder % 100;
+
+
+                                let fifties = parseInt(remainder / 50);
+                                remainder = remainder % 50;
+
+
+                                let tens = parseInt(remainder / 10);
+                                remainder = remainder % 10;
+
+
+                                let fives = parseInt(remainder / 5);
+                                remainder = remainder % 5;
+
+
+                                let twos = parseInt(remainder / 2);
+                                remainder = remainder % 2;
+
+
+                                let ones = parseInt(remainder / 1);
+
+                                console.log(`
+
+                            ${thousands} Note(s) of 1000.00\n
+
+                            ${hundreds} Note(s) of 100.00\n
+
+                            ${fifties} Note(s) of 50.00\n
+
+                            ${tens} Note(s) of 10.00\n
+
+                            ${fives} Note(s) of 5.00\n
+
+                            ${twos} Note(s) of 2.00\n
+
+                            ${ones} Note(s) of 1.00\n
+
+                                `);
+
+                            }
+                            </code>
+                        </pre>
+                            
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+#bg-homepage {
+    background: linear-gradient(rgba(0, 0, 0, 0.729), rgba(0, 0, 0, 0.767)),
+        url('/assets/images/index/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* THIS makes the background stay fixed during scroll */
+    min-width: 100%;
+    min-height: 90vh;
+}

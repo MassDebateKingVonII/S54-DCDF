@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FOP - Tutorial</title>
+
+        <!-- BS5 -->
+        <script src="/assets/js/general/injectBootstrap.js" type="text/javascript" defer></script>
+
+        <!-- Custom Elements -->
+        <script src="/assets/js/general/injectNavbar.js" type="text/javascript" defer></script>
+        <script src="/assets/js/general/injectFooter.js" type="text/javascript" defer></script>
+
+        <script src="/assets/js/general/injectCustom.js" type="text/javascript" defer></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/general/prism.css">
+        <link rel="stylesheet" href="/assets/css/fop/navigation.css">
+        <link rel="stylesheet" href="/assets/css/fop/tutorial.css">
+        <link rel="stylesheet" href="/assets/css/fop/practical.css">
+
+
+        <!-- Custom JS -->
+        <script src="/assets/js/general/prism.js" type="text/javascript" defer></script>
+        <script src="/assets/js/fop/navigation.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <main class="page-content">
+            <div class="container-lg">
+                <div class="row mt-3">
+                    <!-- Left side navigation -->
+                    <div id="fop-sidebar"></div>
+
+                    <div class="col-md-9 col-sm-12 mt-3">
+                        <h2 class="fw-bold">
+                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 4 - Looping
+                        </h2>
+                        <hr>
+                        <p>Loops can execute a block of code a number of times.
+                            Loops are useful to run cover over and over again. It is often paired with
+                            indexing arrays.
+                        </p>
+                        <p>There are multiple ways to write a loop in JavaScript. The primary ones are: </p>
+                        <h4 class="fw-bold"><u>1. For Loop</u></h4>
+                        <div class="p-3">
+                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    for (expr1; expr2; expr) {
+                                        // code block to be executed
+                                    }
+                                </code>
+                            </pre>
+                            <p>Note: There are 3 optional expressions</p>
+
+                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Example</h5>
+                            <p class="my-0">Scenario: I want to print "Hello World" 100 times.</p>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    for (let i = 0; i < 100; i++) {
+                                        console.log("Hello World");
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <h4 class="fw-bold"><u>2. While Loop</u></h4>
+                        <div class="p-3">
+                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    while (condition) {
+                                        // code block to be executed
+                                    }
+                                </code>
+                            </pre>
+
+                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Example</h5>
+                            <p class="my-0">Scenario: I want to print "Hello World" 100 times.</p>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    let x = 0;
+
+                                    while (x < 100) {
+                                        x++;
+                                        console.log("Hello World");
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="fw-bold"><u>3. Do While Loop</u></h4>
+                        <div class="p-3">
+                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    do {
+                                        // Code block to be executed
+                                    } while (condition)
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h2 class="fw-bold mt-5">Practical 3 - Looping</h2>
+                        <hr>
+
+                        <h5 class="mt-4 mb-2">Questions:</h5>
+                        <h6>For Loop:</h6>
+                        <embed src="/assets/documents/fop/prac_3/questions.pdf">
+                        <h6>Do While Loops</h6>
+                        <embed src="/assets/documents/fop/prac_3/questions2.pdf">
+                        <h6>Nested Loops</h6>
+                        <embed src="/assets/documents/fop/prac_3/questions3.pdf">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

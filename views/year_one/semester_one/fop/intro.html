@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>S54 - DCDF</title>
+        <!-- BS5 -->
+        <script src="/assets/js/general/injectBootstrap.js" type="text/javascript" defer></script>
+
+        <!-- Custom Elements -->
+        <script src="/assets/js/general/injectNavbar.js" type="text/javascript" defer></script>
+        <script src="/assets/js/general/injectFooter.js" type="text/javascript" defer></script>
+
+        <script src="/assets/js/general/injectCustom.js" type="text/javascript" defer></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/general/prism.css">
+        <link rel="stylesheet" href="/assets/css/fop/navigation.css">
+
+        <!-- Custom JS -->
+        <script src="/assets/js/general/prism.js" type="text/javascript" defer></script>
+        <script src="/assets/js/fop/navigation.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <div id="navbar"></div>
+        <main class="page-content">
+            <div class="container-lg mt-5">
+                <div class="row">
+                    <!-- Left side navigation -->
+                    <div id="fop-sidebar" class="col-md-3 d-sm-none d-md-block"></div>
+
+                    <!-- Main content -->
+                    <div class="col-md-9 col-sm-12">
+                        <h1 class ="fw-bold">ST2053 - Fundamentals Of Programming</h1>
+
+                        <div>
+                            <h2 class="mt-4 fw-bold">Overview</h2>
+                            <p>Information: The module is currently named "Programming Methodology" in the new syllabus</p>
+                            <p>There are some prerequisities required to start this module. The list of things to download: </p>
+                            <ul>
+                                <li>
+                                    <a href="https://code.visualstudio.com/download" target="a_blank">VSCode</a>: A code editor with many extensions, high customizable and popular
+                                </li>
+                                <li>
+                                    <a href="https://nodejs.org/en/download" target="a_blank">NodeJS</a>: JavaScript runtime environment, used for server-side (backend) scripting
+                                </li>
+                                <li>
+                                    <code class="command-line">npm i readline-sync</code>: After installing NodeJS, install readline-sync library if needed to read user input in command-line
+                                </li>
+                            </ul>
+
+                            <p>Before going into the tutorial, let's write the first program: Printing "Hello World!"</p>
+                            <pre>
+                                <code class="language-javascript">
+                                    console.log("Hello World");
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div id="Note_For_Prac">
+                            <h2 class="mt-4 fw-bold">Quick Note For Practical</h2>
+                            <hr>
+                            <p>Before proceeding, let's get familiar with how project directory works, 
+                            ensure that the VSCode has opened in the correct directory. An example scenario:
+                            </p>
+                            <ol>
+                                <li>Create a directory called "Testing"</li>
+                                <li>Open the directory "Testing" inside VSCode</li>
+                                <li>Open Terminal inside VSCode
+                                    <img src="/assets/images/fop/intro/directory.png" class="img-fluid">
+                                    <p>Note that the last folder must be exactly the directory name "Testing"</p>
+                                </li>
+                                <li>Ensure that CMD is selected as Terminal so that nodejs can perform with elevated permissions</li>
+                            </ol>
+
+                            <p>After installing the <code class="commandline">readline-sync</code> module/library, ensure there is
+                            a <code>node_modules</code> folder created like so: </p>
+
+                            <ol>
+                                <li>In Terminal of VSCode, run the command
+                                    <pre class="command-line language-bash" data-user="root" data-host="localhost">
+                                        <code>npm i readline-sync</code>
+                                    </pre>
+                                    <img src="/assets/images/fop/intro/installing.png" class="img-fluid">
+
+                                </li>
+                                <li class="mt-3">There exists in the left sidebar of VSCode, the files:
+                                    <ul>
+                                        <li>
+                                            node_modules
+                                        </li>
+                                        <li>
+                                            package.json
+                                        </li>
+                                        <li>
+                                            package.json.lock
+                                        </li>
+                                    </ul>
+                                    <img src="/assets/images/fop/intro/result.png" class="img-fluid">
+                                </li>
+
+                            </ol>
+
+                            <p>Now, for each question, use these same steps to create a project per practical exercise to atempt the questions.</p>
+
+                            <h5>Template to use <code>readline-sync</code></h5>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    const reader = require('readline-sync');
+
+                                    // Ask a question (prompt user input)
+                                    // Value is stored into the variable called input
+                                    const input = reader.question("enter your prompt here: ");
+
+
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div id="Useful_Resource">
+                            <h2 class="mt-4 fw-bold">Useful Resources</h2>
+                            <hr>
+                            <div class = "row gy-4 my-2 gx-1">
+
+                                <!-- Recommended Learning Websites -->
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-info bg-opacity-50">
+                                            <h5 class="my-0"><i class="bi bi-book-half text-secondary"></i> Tutorial Websites</h5>
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p>Some good tutorial websites to refer and learn on your own:</p>
+                                                <ul>
+                                                    <li>
+                                                        <a 
+                                                        href="https://www.w3schools.com/js/" target="a_blank">
+                                                        W3Schools</a>: One of the best resources to learn coding from.
+                                                    </li>
+                                                    <li>
+                                                        <a 
+                                                        href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/" target="a_blank">
+                                                        GeeksForGeeks</a>: A slightly more advanced website to learn coding from.
+                                                    </li>
+                                                
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testing -->
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-info bg-opacity-50">
+                                            <h5 class="my-0"><i class="bi bi-flask-fill text-success"></i> Testing</h5>
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p>Below are some website to quickly test and develop simple javascript codes:</p>
+                                                <ul>
+                                                    <li>
+                                                        <a 
+                                                        href="https://www.programiz.com/javascript/online-compiler/" target="a_blank">
+                                                        JavaScript Compiler</a>: Useful for testing NodeJS environment code.
+                                                    </li>
+                                                    <li>
+                                                        <a 
+                                                        href="https://onecompiler.com/javascript" target="a_blank">
+                                                        OneCompiler
+                                                        </a>: Useful for knowing how to solve basic problems.
+                                                    </li>
+                                                
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Extra Practise-->
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-info bg-opacity-50">
+                                            <h5 class="my-0"><i class="bi bi-bullseye text-danger"></i> Extra Practise</h5>
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p>Below are some website to hone your skills in Javascript:</p>
+                                                <ul>
+                                                    <li>
+                                                        <a 
+                                                        href="https://the-winter.github.io/codingjs/" target="a_blank">
+                                                        CodingBat</a>: Useful for knowing how to solve basic problems.
+                                                    </li>
+                                                    <li>
+                                                        <a href="https://leetcode.com/" target="a_blank">Leetcode</a>: 
+                                                        Useful for knowing how to solve basic problems.
+                                                    </li>
+                                                
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Youtube-->
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-info bg-opacity-50">
+                                            <h5 class="my-0"><i class="bi bi-youtube text-danger"></i> Youtube Videos</h5>
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p>Some nice videos to learn more on your own:</p>
+                                                <ul>
+                                                    <li>
+                                                        <a 
+                                                        href="https://www.youtube.com/watch?v=lfmg-EJ8gm4" target="a_blank">
+                                                        In-Depth Tutorial</a>: A very long simple tutorial to understand JavaScript.
+                                                    </li>
+                                                    <li>
+                                                        <a 
+                                                        href="https://www.youtube.com/watch?v=Ihy0QziLDf0" target="a_blank">
+                                                        Beginner Tutorial</a>: A short beginner-friendly tutorial to understand JavaScript.
+                                                    </li>
+                                                
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer"></div>
+    </body> 
+</html>

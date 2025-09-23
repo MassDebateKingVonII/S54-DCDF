@@ -1,0 +1,17 @@
+/* Make dropdown toggle highlight like nav-link when active */
+#left-navbar-navigation .nav-link.dropdown-toggle.active {
+    color: #fff;
+    background-color: #0d6efd; /* Bootstrap primary */
+}
+
+/* Make dropdown items wrap long text */
+#left-navbar-navigation .dropdown-menu .dropdown-item {
+    white-space: normal;   /* allow wrapping */
+    word-break: break-word; /* break very long words */
+}
+
+/* Optional: full-width dropdown items */
+#left-navbar-navigation .dropdown-menu {
+    width: 100% !important;
+}
+
