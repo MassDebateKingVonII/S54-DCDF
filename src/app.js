@@ -27,6 +27,9 @@ app.use(express.urlencoded({ extended: true }));
 //     }
 // }));
 
+app.use("/", express.static("public/"));
+
+
 
 // Main index page
 app.get("/", (req, res) => {
