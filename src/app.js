@@ -16,23 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 //////////////////////////////////////////////////////
 // STATIC ACCESS CONTROL SETUP
 //////////////////////////////////////////////////////
-
-
 if (process.env.IS_VERCEL === "false") {
     app.use(express.static("public"));
 
 }
-
-// app.use("/", express.static("public", {
-//     setHeaders: (res, path) => {
-//         if (path.endsWith(".js")) {
-//             res.setHeader("Content-Type", "application/javascript; charset=utf-8");
-//         }
-//         if (path.endsWith(".css")) {
-//             res.setHeader("Content-Type", "text/css; charset=utf-8");
-//         }
-//     }
-// }));
 
 // Main index page
 app.get("/", (req, res) => {
