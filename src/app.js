@@ -16,10 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 //////////////////////////////////////////////////////
 // STATIC ACCESS CONTROL SETUP
 //////////////////////////////////////////////////////
-if (process.env.IS_VERCEL === "false") {
-    app.use(express.static("public"));
-
-}
+app.use(express.static("public"));
 
 // // Main index page
 // app.get("/", (req, res) => {
