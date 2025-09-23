@@ -18,7 +18,13 @@ app.use(express.urlencoded({ extended: true }));
 // STATIC ACCESS CONTROL SETUP
 //////////////////////////////////////////////////////
 
-app.use("/", express.static("public"));
+// app.use("/", express.static("public"));
+
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "Hello World!"
+    })
+})
 
 // // Main index page
 // app.get("/", (req, res) => {
