@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+require('dotenv').config();
 /*
 const mainRoutes = require('./routes/mainRoutes.js');
 const jwtMiddleware = require('./middleware/auth/jwtMiddleware.js');
@@ -16,7 +17,11 @@ app.use(express.urlencoded({ extended: true }));
 // STATIC ACCESS CONTROL SETUP
 //////////////////////////////////////////////////////
 
-app.use(express.static(path.join(__dirname, "public")));
+
+if (process.env.IS_VERCEL === "false") {
+    app.use(express.static("public"));
+
+}
 
 // app.use("/", express.static("public", {
 //     setHeaders: (res, path) => {
