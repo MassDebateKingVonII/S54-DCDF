@@ -1,5 +1,10 @@
 /* All the basic required styling */
 
+html {
+    visibility: visible;
+    opacity: 1;
+}
+
 html, body {
   height: 100%;
   margin: 0;

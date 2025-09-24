@@ -19,13 +19,16 @@
         // Bootstrap
         "/assets/js/general/injectBootstrap.js",
 
+        // Utils CSS
+        "/assets/js/general/injectUtilCss.js",
+
         // Custom Elements
         "/assets/js/general/injectNavbar.js",
         "/assets/js/general/injectFooter.js",
+
+        // General Styling
         "/assets/js/general/injectGeneralStyle.js",
 
-        // Utils CSS
-        "/assets/js/general/injectUtilCss.js",
 
         // Custom JS
         "/assets/js/general/prism.js",

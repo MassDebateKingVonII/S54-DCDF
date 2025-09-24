@@ -2,19 +2,16 @@
 <html>
     <head>
         <title>S54 - DCDF</title>
-        <script src="/assets/js/general/preLoader.js" defer></script>
         <script src="/assets/js/general/injectHead.js" defer></script>
 
         <link rel="stylesheet" href="/assets/css/index/homepage.css">
     </head>
-    <body>
-        <!-- Preloader overlay -->
-        <div id="preloader"
-            style="position: fixed; inset: 0; background: white; display:flex; justify-content:center; align-items:center; z-index:2000;">
-            <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+    <body style="opacity: 0">
+        <style>
+            body {
+                opacity: 1 !important;
+            }
+        </style>
 
         <div id="navbar"></div>
         <main class="page-content">
