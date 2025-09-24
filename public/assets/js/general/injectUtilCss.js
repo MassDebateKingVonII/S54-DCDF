@@ -15,7 +15,12 @@ const utilsFolder = "/assets/css/utils/";
 
 utilsCSSFiles.forEach(file => {
     const link = document.createElement("link");
-    link.rel = "stylesheet";
+    link.rel = "preload";
+    link.as = "style";
     link.href = utilsFolder + file;
+    link.onload = () => {
+        link.rel = "stylesheet"; // switch to actual stylesheet after loaded
+    };
     document.head.appendChild(link);
+
 });
