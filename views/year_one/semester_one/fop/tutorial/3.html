@@ -7,13 +7,13 @@
     </head>
     <body>
         <div id="navbar"></div>
-        <main class="page-content">
+        <main class="page-content mb-5">
             <div class="container-lg">
                 <div class="row mt-3">
                     <!-- Left side navigation -->
                     <div id="fop-sidebar"></div>
 
-                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
+                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
                             <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 3 - Operator Precedence
                         </h2>
@@ -502,507 +502,777 @@
                                     <h4>Q1)</h4>
                                     <ol class="letter-list">
                                         <li>4</li>
-                                        <li>5</li>
-                                        <li>6</li>
+                                        <li>1.4285714285714286 or 10/7</li>
+                                        <li>2</li>
+                                        <li>10</li>
+                                        <li>7</li>
+                                        <li>2.666666666666667 or 8/3</li>
+                                        <li>53.9</li>
+                                        <li>81</li>
                                     </ol>
+
+                                    <h4>Q2)</h4>
+                                    <table class="table table-bordered table-striped table-hover align-middle">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th class="w-10"></th>
+                                                <th class="w-70">Program</th>
+                                                <th class="w-20">Output</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>(a)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                        console.log(5 * 20 + 7 % 6);
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                            101
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>(b)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log("FOP" + "is" +"fun!");;
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        FOPisfun!
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>(c)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log(1 + "abcd");
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        1abcd
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>(d)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log("abcd " + 1);
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        abcd 1
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>(e)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log(5 + 4 + " abcd ");
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        9 abcd
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>(f)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log(1 + " abcd " + 1);
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        1 abcd 1
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>(g)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log("abcd " + 1 + 1);
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        abcd 11
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>(g)</td>
+                                                <td>
+                                                    <pre class="line-numbers">
+                                                        <code class="language-javascript">
+                                                            console.log(1 + "ab" + (1+1));
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                                <td>
+                                                    <pre>
+                                                        <code class="language-bash">
+                                                        1ab2
+                                                        </code>
+                                                    </pre>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h4>Q3)</h4>
+                                    <ol class="letter-list">
+                                        <li>false</li>
+                                        <li>true</li>
+                                        <li>false</li>
+                                        <li>true</li>
+                                        <li>true</li>
+                                        <li>true</li>
+                                        <li>true</li>
+                                        <li>true</li>
+                                        <li>false</li>
+                                    </ol>
+
+                                    <h4>Q4)</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover align-middle">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th>Program</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <pre class="line-number">
+                                                            <code class="language-javascript">
+                                                                let b1 = true, b2 = false, b3 = true;
+                                                                let a1 = 1, a2 = 2, a3 = 3;
+                                                                console.log (b1 && b2 || b3);
+                                                                console.log (a2 >= a3);
+                                                                console.log (a1 < a2);
+                                                                console.log (++a1 == a2);
+                                                                console.log ("a1 = " + a1);
+                                                                console.log ("a2 = " + a2);
+                                                                console.log ("a3 = " + a3);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h6>Output:</h6>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                                true
+                                                                false
+                                                                true
+                                                                true
+                                                                a1 = 2
+                                                                a2 = 2
+                                                                a3 = 3
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h4>Q5)</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover align-middle">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th class="w-10"></th>
+                                                    <th class="w-60">Program</th>
+                                                    <th class="w-30">Error(s)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        (a)
+                                                    </td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                let _them = 'true',
+                                                                _them = 5;
+                                                                console.log('_them);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Mismatched quotes in <code>console.log</code></li>
+                                                            <li>Redeclared variable <code>_them</code></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        (b)
+                                                    </td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                let n1 = 5, n2 = 0;
+                                                                n1 /= n2;
+                                                                console.log(n1);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>No Syntax Errors</li>
+                                                            <li>Output will be <code class="language-bash">Infinity</code></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        (c)
+                                                    </td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                const pi = 3.14159;
+                                                                pi = 3.142;
+                                                                console.log(pi);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>
+                                                                <code class="language-bash">
+                                                                    TypeError: Assignment to constant variable.
+                                                                </code>
+                                                            </li>
+                                                            <li>
+                                                                Because pi was declared with <code class="language-javascript">const</code>, it cannot be reassigned.
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h4>Q6)</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover align-middle">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th class="w-10"></th>
+                                                    <th class="w-80">Program</th>
+                                                    <th class="w-10">Output</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>(a)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                let num = 10;
+                                                                if (num > 10) {
+                                                                    console.log("a");
+                                                                }
+                                                                if (num > 5) {
+                                                                    console.log("b");
+                                                                }
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            b
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>(b)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                if (4 >= 4) {
+                                                                    console.log("c");
+                                                                }
+                                                                if (2 > 5 || 3 < 6) {
+                                                                    console.log("d");
+                                                                }
+                                                                if (true) {
+                                                                    console.log("e");
+                                                                }
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            c
+                                                            d
+                                                            e
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>(c)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                if (15 % 4 == 3 && 2 * 2 > 3) {
+                                                                    console.log("f");
+                                                                }
+                                                                if (true || false) {
+                                                                    console.log("g");
+                                                                }
+                                                                if (! false && 11 % 3 >= 3) {
+                                                                    console.log("h");
+                                                                }
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            f
+                                                            g
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <h4>Q7)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 7
+                                            ==============================
+                                            */
+
+                                            let x = 20;
+                                            let y = 5;
+                                            let z  = x * y;
+
+                                            console.log(`
+                                            x: ${x}
+                                            y: ${y}
+                                            z: ${z}
+                                            `);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q8)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 8
+                                            ==============================
+                                            */
+
+                                            // (a)
+                                            const reader = require("readline-sync");
+
+                                            let name, color;
+                                            do {
+                                                name = reader.question("Enter your name: ");
+                                            } while(name.length === 0);
+
+                                            console.log(name + " loves Programming!");
+
+                                            // (b)
+
+                                            // Code is continued from (a) as one whole program
+                                            do {
+                                                color = reader.question("Enter your favorite color: ");
+                                            } while (color.length === 0)
+
+                                            console.log(name + " loves Programming & " + color + " color");
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q9)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 9
+                                            ==============================
+                                            */
+                                            const q = require("readline-sync");
+
+                                            let fa;
+                                            let cel;
+
+                                            do {
+
+                                                fa = Number(q.question("Enter Temperature in Fahrenheit: "));
+                                                // check fa first
+
+                                                if (Number.isNaN(fa)) {
+
+                                                    console.log("It is not a number!");
+                                                    continue;
+
+                                                } else {
+
+                                                    cel = 5/9*(fa-32);
+
+                                                    if (cel <20 || cel >25) {
+
+                                                        console.log("It is not in the range");
+                                                        continue;
+                                                    } else {
+                                                        break;
+                                                    }
+                                                }
+
+                                            } while(true);
+
+                                            console.log(`The current room temperature is ${cel} degrees Celcius`);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q10)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 10
+                                            ==============================
+                                            */
+                                            const scanner = require(`readline-sync`);
+
+                                            let x;
+                                            let y;
+
+                                            do {
+                                                x = scanner.question("Enter First number: ");
+                                            } while (
+                                                Number.isNaN(Number(x)) || 
+                                                x === null || 
+                                                x.length == 0
+                                            );
+
+                                            do {
+
+                                                y = scanner.question("Enter Second Number: ");
+
+                                            } while (
+                                                Number.isNaN(Number(y)) || 
+                                                y === null ||
+                                                y.length == 0
+                                            );
+
+                                            x = Number(x);
+                                            y = Number(y);
+
+                                            console.log(`
+                                            ${x} + ${y} = ${(x+y)}
+                                            ${x} is divisible by ${y}? ${x%y==0}`);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q11)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 11
+                                            ==============================
+                                            */
+
+                                            let year1 = 1996;
+                                            let year2 = 1900;
+
+                                            let isLeapYear;
+
+                                            function evalYear(year) {
+
+                                                isLeapYear = year % 4 === 0 && year % 100 !== 0 || year%400 === 0;
+
+                                                console.log(year + " is a leap year? " + isLeapYear);
+                                            }
+
+                                            evalYear(year1);
+                                            evalYear(year2);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q12)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 12
+                                            ==============================
+                                            */
+
+                                            const scanner = require("readline-sync");
+
+                                            let username;
+                                            let salary;
+
+                                            do {
+
+                                                username = scanner.question("Enter your name: ");
+
+                                            } while(username === null || 
+                                                username === undefined || 
+                                                username.length === 0);
+
+                                            console.log(`Hello ${username}!`);
+
+                                            do {
+
+                                                salary = scanner.question("Please enter your current salary: ");
+                                                salary = salary.replaceAll("$","");
+
+
+                                            } while(salary === null || 
+                                                salary === undefined || 
+                                                salary.length == 0 || 
+                                                Number.isNaN(Number(salary) ||
+                                                Number(salary) == 0
+                                            ));
+
+                                            salary = Number(salary);
+                                            let newsalary = salary;
+
+                                            switch (true) {
+
+                                                case (newsalary<1000):
+
+                                                newsalary += (0.2*newsalary);
+
+                                                case (newsalary<2000 && newsalary>1000):
+
+                                                newsalary += (newsalary*0.15);
+
+                                                case (newsalary >= 2000):
+
+                                                newsalary += (newsalary*0.1);
+                                            }
+
+                                            console.log(`
+                                            Here\'s the result....
+                                            Current Salary     Increment     New Salary
+                                            ${salary}              ${newsalary-salary}           ${newsalary}  
+                                            `);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q13)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 13
+                                            ==============================
+                                            */
+
+                                            const scanner = require("readline-sync");
+
+                                            let x1;
+                                            let y1;
+                                            let x2;
+                                            let y2;
+                                            let distance = 0;
+
+                                            do {
+                                                x1 = Number(scanner.question("x1: "));
+                                                if (Number.isNaN(x1)) {
+                                                    console.log("Invalid Input of x1");
+                                                    continue;
+                                                }
+                                                y1 = Number(scanner.question("y1: "));
+                                                if (Number.isNaN(y1)) {
+                                                    console.log("Invalid Input of y1");
+                                                    continue;
+                                                }
+                                                x2 = Number(scanner.question("x2: "));
+                                                if (Number.isNaN(x2)) {
+                                                    console.log("Invalid Input of x2");
+                                                    continue;
+                                                }
+                                                y2 = Number(scanner.question("y2: "));
+                                                if (Number.isNaN(x2)) {
+                                                    console.log("Invalid Input of y2");
+                                                    continue;
+                                                }
+
+                                                distance = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+                                                break;
+                                            } while (true);
+
+                                            console.log(distance);
+                                        </code>
+                                    </pre>
+                                    
+                                    <h4>Q14)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 14
+                                            ==============================
+                                            */
+
+                                            const scanner = require("readline-sync");
+
+                                            let theta1;
+                                            let theta2;
+
+                                            do {
+
+                                            theta1 = Number(scanner.question("First Angle: "));
+                                            theta2 = Number(scanner.question("Second Angle: "));
+
+                                                if (theta1 + theta2 >= 180 || theta1 == 0 || theta2 == 0 
+                                                    || Number.isNaN(theta1) || Number.isNaN(theta2)) {
+
+                                                    console.log("Invalid values");
+                                                    continue;
+                                                } else {
+
+                                                    console.log(`Third angle is ${180 - theta1 - theta2} deegrees`);
+
+                                                    break;
+                                                }
+
+                                            } while (true);
+                                        </code>
+                                    </pre>
+
+                                    <h4>Q15)</h4>
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            /*
+                                            ==============================
+                                            Question 15
+                                            ==============================
+                                            */
+
+                                            const q = require("readline-sync");
+
+                                            let value = Number(q.question("Enter Amount ($): "));
+
+
+                                            if (value < 0 || Number.isNaN(value) || !Number.isInteger(value)) {
+
+                                                console.log("Invalid Value: Make sure its an integer");
+
+                                            } else {
+                                                let thousands = parseInt(value / 1000);
+                                                let remainder = value % 1000;
+
+
+                                                let hundreds = parseInt(remainder / 100);
+                                                remainder = remainder % 100;
+
+
+                                                let fifties = parseInt(remainder / 50);
+                                                remainder = remainder % 50;
+
+
+                                                let tens = parseInt(remainder / 10);
+                                                remainder = remainder % 10;
+
+
+                                                let fives = parseInt(remainder / 5);
+                                                remainder = remainder % 5;
+
+
+                                                let twos = parseInt(remainder / 2);
+                                                remainder = remainder % 2;
+
+
+                                                let ones = parseInt(remainder / 1);
+
+                                                console.log(`
+
+                                            ${thousands} Note(s) of 1000.00\n
+
+                                            ${hundreds} Note(s) of 100.00\n
+
+                                            ${fifties} Note(s) of 50.00\n
+
+                                            ${tens} Note(s) of 10.00\n
+
+                                            ${fives} Note(s) of 5.00\n
+
+                                            ${twos} Note(s) of 2.00\n
+
+                                            ${ones} Note(s) of 1.00\n
+
+                                                `);
+
+                                            }
+                                        </code>
+                                    </pre>
                                 </div>
                             </div>
-                        </div>
-
-                        <h5 class="mt-5">Answer Key:</h5>
-                        <pre class="line-numbers">
-                            <code class="language-javascript">
-                            /*
-                            ==============================
-                            Question 1
-                            ==============================
-                            */
-
-                            // Ensure you find the value of variable **a1**
-
-                            // (a)
-                            // Ans: 4
-
-                            // (b)
-                            // Ans: 1.4285714285714286
-
-                            // (c)
-                            // Ans: 2
-
-                            // (d)
-                            // Ans: 10
-
-                            // (e)
-                            // Ans: 7
-
-                            // (f)
-                            // Ans: 2.666666666666667
-
-                            // (g)
-                            // Ans: 53.9
-
-                            // (h)
-                            // Ans: 81
-
-
-                            /*
-                            ==============================
-                            Question 2
-                            ==============================
-                            */
-
-                            // (a)
-                            // Ans: 101
-
-                            // (b)
-                            // Ans: FOPisfun!
-
-                            // (c)
-                            // Ans: 1abcd
-
-                            // (d)
-                            // Ans: abcd 1
-
-                            // (e)
-                            // Ans: 9 abcd
-
-                            // (f)
-                            // Ans: 1 abcd 1
-
-                            // (g)
-                            // Ans: abcd 11
-
-                            // (h)
-                            // Ans: 1ab2
-
-
-                            /*
-                            ==============================
-                            Question 3
-                            ==============================
-                            */
-
-                            // (a)
-                            // Ans: false
-
-                            // (b)
-                            // Ans: true
-
-                            // (c)
-                            // Ans: false
-
-                            // (d)
-                            // Ans: true
-
-                            // (e)
-                            // Ans: true
-
-                            // (f)
-                            // Ans: true
-
-                            // (g)
-                            // Ans: true
-
-                            // (h)
-                            // Ans: true
-
-                            // (i)
-                            // Ans: false
-
-                            /*
-                            ==============================
-                            Question 4
-                            ==============================
-                            */
-
-                            /* Ans:
-
-                            true
-                            false
-                            true
-                            true
-                            a1 = 2
-                            a2 = 2
-                            a3 = 3
-
-                            */
-
-
-                            /*
-                            ==============================
-                            Question 5
-                            ==============================
-                            */
-
-                            // (a)
-                            // Ans: It has a quotation mark prefixing the variable name
-
-
-                            // (b)
-                            // Ans: No errors, Infinity will be output
-
-                            // (c)
-                            // Ans: Since pi variable is a contant variable, value cannot be changed
-
-                            /*
-                            ==============================
-                            Question 6
-                            ==============================
-                            */
-
-                            // (a) 
-                            // Ans: b
-
-                            // (b)
-                            /* Ans:
-
-                            c
-                            d
-                            e
-
-                            */
-
-
-                            // (c)
-                            /* Ans:
-                            f
-                            g
-                            */
-
-
-                            /*
-                            ==============================
-                            Question 7
-                            ==============================
-                            */
-
-                            let x = 20;
-                            let y = 5;
-                            let z  = x * y;
-
-                            console.log(`
-                            x: ${x}
-                            y: ${y}
-                            z: ${z}
-                            `)
-
-                            /*
-                            ==============================
-                            Question 8
-                            ==============================
-                            */
-
-                            // (a)
-                            const reader = require("readline-sync");
-
-                            let name, color;
-                            do {
-                                name = reader.question("Enter your name: ");
-                            } while(name.length === 0);
-
-                            console.log(name + " loves Programming!");
-
-                            // (b)
-
-                            // Code is continued from (a) as one whole program
-                            do {
-                                color = reader.question("Enter your favorite color: ");
-                            } while (color.length === 0)
-
-                            console.log(name + " loves Programming & " + color + " color");
-
-
-                            /*
-                            ==============================
-                            Question 9
-                            ==============================
-                            */
-                            const q = require("readline-sync");
-
-                            let fa;
-                            let cel;
-
-                            do {
-
-                                fa = Number(q.question("Enter Temperature in Fahrenheit: "));
-                                // check fa first
-
-                                if (Number.isNaN(fa)) {
-
-                                    console.log("It is not a number!");
-                                    continue;
-
-                                } else {
-
-                                    cel = 5/9*(fa-32);
-
-                                    if (cel <20 || cel >25) {
-
-                                        console.log("It is not in the range");
-                                        continue;
-                                    } else {
-                                        break;
-                                    }
-                                }
-
-                            } while(true);
-
-                            console.log(`The current room temperature is ${cel} degrees Celcius`);
-
-
-
-                            /*
-                            ==============================
-                            Question 10
-                            ==============================
-                            */
-                            const scanner = require(`readline-sync`);
-
-                            let xx;
-                            let yy;
-
-                            do {
-                                x = scanner.question("Enter First number: ");
-                            } while (
-                                Number.isNaN(Number(xx)) || 
-                                xx === null || 
-                                xx.length == 0
-                            );
-
-                            do {
-
-                                yy = scanner.question("Enter Second Number: ");
-
-                            } while (
-                                Number.isNaN(Number(y)) || 
-                                yy === null ||
-                                yy.length == 0
-                            );
-
-                            xx = Number(x);
-                            yy = Number(y);
-
-                            console.log(`
-                            ${x} + ${y} = ${(x+y)}
-                            ${x} is divisible by ${y}? ${x%y==0}`);
-
-                            /*
-                            ==============================
-                            Question 11
-                            ==============================
-                            */
-
-                            let year1 = 1996;
-                            let year2 = 1900;
-
-                            let isLeapYear;
-
-                            function evalYear(year) {
-
-                                isLeapYear = year % 4 === 0 && year % 100 !== 0 || year%400 === 0;
-
-                                console.log(year + " is a leap year? " + isLeapYear);
-                            }
-
-                            evalYear(year1);
-                            evalYear(year2);
-
-                            /*
-                            ==============================
-                            Question 12
-                            ==============================
-                            */
-
-                            const scanner = require("readline-sync");
-
-                            let username;
-                            let salary;
-
-                            do {
-
-                                username = scanner.question("Enter your name: ");
-
-                            } while(username === null || 
-                                username === undefined || 
-                                username.length === 0);
-
-                            console.log(`Hello ${username}!`);
-
-                            do {
-
-                                salary = scanner.question("Please enter your current salary: ");
-                                salary = salary.replaceAll("$","");
-
-
-                            } while(salary === null || 
-                                salary === undefined || 
-                                salary.length == 0 || 
-                                Number.isNaN(Number(salary) ||
-                                Number(salary) == 0
-                            ));
-
-                            salary = Number(salary);
-                            let newsalary = salary;
-
-                            switch (true) {
-
-                                case (newsalary<1000):
-
-                                newsalary += (0.2*newsalary);
-
-                                case (newsalary<2000 && newsalary>1000):
-
-                                newsalary += (newsalary*0.15);
-
-                                case (newsalary >= 2000):
-
-                                newsalary += (newsalary*0.1);
-                            }
-
-                            console.log(`
-                            Here\'s the result....
-                            Current Salary     Increment     New Salary
-                            ${salary}              ${newsalary-salary}           ${newsalary}  
-                            `);
-
-
-                            /*
-                            ==============================
-                            Question 13
-                            ==============================
-                            */
-
-                            const scanner = require("readline-sync");
-
-                            let x1;
-                            let y1;
-                            let x2;
-                            let y2;
-                            let distance = 0;
-
-                            do {
-                                x1 = Number(scanner.question("x1: "));
-                                if (Number.isNaN(x1)) {
-                                    console.log("Invalid Input of x1");
-                                    continue;
-                                }
-                                y1 = Number(scanner.question("y1: "));
-                                if (Number.isNaN(y1)) {
-                                    console.log("Invalid Input of y1");
-                                    continue;
-                                }
-                                x2 = Number(scanner.question("x2: "));
-                                if (Number.isNaN(x2)) {
-                                    console.log("Invalid Input of x2");
-                                    continue;
-                                }
-                                y2 = Number(scanner.question("y2: "));
-                                if (Number.isNaN(x2)) {
-                                    console.log("Invalid Input of y2");
-                                    continue;
-                                }
-
-                                distance = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
-                                break;
-                            } while (true);
-
-                            console.log(distance);
-
-
-                            /*
-                            ==============================
-                            Question 14
-                            ==============================
-                            */
-
-                            const scanner = require("readline-sync");
-
-                            let theta1;
-                            let theta2;
-
-                            do {
-
-                            theta1 = Number(scanner.question("First Angle: "));
-                            theta2 = Number(scanner.question("Second Angle: "));
-
-                                if (theta1 + theta2 >= 180 || theta1 == 0 || theta2 == 0 
-                                    || Number.isNaN(theta1) || Number.isNaN(theta2)) {
-
-                                    console.log("Invalid values");
-                                    continue;
-                                } else {
-
-                                    console.log(`Third angle is ${180 - theta1 - theta2} deegrees`);
-
-                                    break;
-                                }
-
-                            } while (true);
-
-                            /*
-                            ==============================
-                            Question 15
-                            ==============================
-                            */
-
-                            const q = require("readline-sync");
-
-                            let value = Number(q.question("Enter Amount ($): "));
-
-
-                            if (value < 0 || Number.isNaN(value) || !Number.isInteger(value)) {
-
-                                console.log("Invalid Value: Make sure its an integer");
-
-                            } else {
-                                let thousands = parseInt(value / 1000);
-                                let remainder = value % 1000;
-
-
-                                let hundreds = parseInt(remainder / 100);
-                                remainder = remainder % 100;
-
-
-                                let fifties = parseInt(remainder / 50);
-                                remainder = remainder % 50;
-
-
-                                let tens = parseInt(remainder / 10);
-                                remainder = remainder % 10;
-
-
-                                let fives = parseInt(remainder / 5);
-                                remainder = remainder % 5;
-
-
-                                let twos = parseInt(remainder / 2);
-                                remainder = remainder % 2;
-
-
-                                let ones = parseInt(remainder / 1);
-
-                                console.log(`
-
-                            ${thousands} Note(s) of 1000.00\n
-
-                            ${hundreds} Note(s) of 100.00\n
-
-                            ${fifties} Note(s) of 50.00\n
-
-                            ${tens} Note(s) of 10.00\n
-
-                            ${fives} Note(s) of 5.00\n
-
-                            ${twos} Note(s) of 2.00\n
-
-                            ${ones} Note(s) of 1.00\n
-
-                                `);
-
-                            }
-                            </code>
-                        </pre>
-                            
+                        </div>    
                     </div>
                 </div>
             </div>

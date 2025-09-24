@@ -4,6 +4,10 @@
     const head = document.head;
 
     // 1️⃣ Meta tags
+    const metaCharset = document.createElement("meta");
+    metaCharset.setAttribute("charset", "UTF-8");
+    head.appendChild(metaCharset);
+
     const metaViewport = document.createElement('meta');
     metaViewport.name = "viewport";
     metaViewport.content = "width=device-width, initial-scale=1";

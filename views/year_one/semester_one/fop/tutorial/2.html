@@ -7,282 +7,295 @@
     </head>
     <body>
         <div id="navbar"></div>
-        <main class="page-content">
+        <main class="page-content mb-5">
             <div class="container-lg">
                 <div class="row mt-3">
                     <!-- Left side navigation -->
                     <div id="fop-sidebar"></div>
 
-                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
+                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
                             <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 2 - Operators
                         </h2>
                         <hr>
-                        <h6 class="mt-5">Arithmetic Operators</h6>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped text-center align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th scope="col">Operator</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Example</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>+</code></td>
-                                        <td>Addition</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
+                        <div class="p-3">
+                            <h5>
+                                <i class="bi bi-binoculars-fill"></i> Overview
+                            </h5>
+                            <p>Operators in programming are symbols that perform operations 
+                                on values (also called operands). 
+                                They are used to calculate, compare, or combine data.
+                            </p>
+
+                            <h5 class="mt-5">
+                                <i class="bi bi-table"></i> Operators Table
+                            </h5>
+                            <h6>Arithmetic Operators</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped text-center align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th class="w-10">Operator</th>
+                                            <th class="w-10">Description</th>
+                                            <th class="w-80">Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>+</code></td>
+                                            <td>Addition</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 5;
+                                                        let y = 2;
+                                                        console.log(x + y); // Output is 7
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-</code></td>
+                                            <td>Subtraction</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 5;
+                                                        let y = 2;
+                                                        console.log(x - y); // Output is 2
+                                                    </code>
+                                                </pre>
+                                        </tr>
+                                        <tr>
+                                            <td><code>*</code></td>
+                                            <td>Multiplication</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 5;
+                                                        let y = 3;
+                                                        console.log(x * y); // Output is 5 x 3 = 15
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>**</code></td>
+                                            <td>Exponentiation</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 5;
+                                                        let y = 3;
+                                                        console.log(5 ** 3); // 5^3 = 125
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/</code></td>
+                                            <td>Division</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 10;
+                                                        let y = 2;
+                                                        console.log(x/y); // Output is 10 ÷ 2 = 5
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>%</code></td>
+                                            <td>Modulus (Remainder)</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 10;
+                                                        let y = 3;
+                                                        console.log(x%y); // Output is 10 ÷ 3 = 3R1, hence 1
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>++</code></td>
+                                            <td>Increment</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
                                                     let x = 5;
-                                                    let y = 2;
-                                                    console.log(x + y); // Output is 7
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>-</code></td>
-                                        <td>Subtraction</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 5;
-                                                    let y = 2;
-                                                    console.log(x - y); // Output is 2
-                                                </code>
-                                            </pre>
-                                    </tr>
-                                    <tr>
-                                        <td><code>*</code></td>
-                                        <td>Multiplication</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 5;
-                                                    let y = 3;
-                                                    console.log(x * y); // Output is 5 x 3 = 15
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>**</code></td>
-                                        <td>Exponentiation</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 5;
-                                                    let y = 3;
-                                                    console.log(5 ** 3); // 5^3 = 125
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/</code></td>
-                                        <td>Division</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 10;
-                                                    let y = 2;
-                                                    console.log(x/y); // Output is 10 ÷ 2 = 5
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>%</code></td>
-                                        <td>Modulus (Remainder)</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 10;
-                                                    let y = 3;
-                                                    console.log(x%y); // Output is 10 ÷ 3 = 3R1, hence 1
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>++</code></td>
-                                        <td>Increment</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                let x = 5;
-                                                x++;
-                                                console.log(x);  // 6
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>--</code></td>
-                                        <td>Decrement</td>
-                                        <td>
-                                            <pre class="line-numbers">
-                                                <code class="language-javascript">
-                                                    let x = 5;
-                                                    x--;
-                                                    console.log(x); // Output is 4
-                                                </code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                                    x++;
+                                                    console.log(x);  // 6
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>--</code></td>
+                                            <td>Decrement</td>
+                                            <td>
+                                                <pre class="line-numbers">
+                                                    <code class="language-javascript">
+                                                        let x = 5;
+                                                        x--;
+                                                        console.log(x); // Output is 4
+                                                    </code>
+                                                </pre>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <div class="text-end fst-italic small text-muted">
-                            Source: W3Schools
-                        </div>
+                            <div class="text-end fst-italic small text-muted">
+                                Source: W3Schools
+                            </div>
 
-                        <h6 class="mt-2">Assignment Operators</h6>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Operator</th>
-                                        <th>Example</th>
-                                        <th>Same As</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>=</code></td>
-                                        <td><code>x = y</code></td>
-                                        <td><code>x = y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>+=</code></td>
-                                        <td><code>x += y</code></td>
-                                        <td><code>x = x + y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>-=</code></td>
-                                        <td><code>x -= y</code></td>
-                                        <td><code>x = x - y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>*=</code></td>
-                                        <td><code>x *= y</code></td>
-                                        <td><code>x = x * y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/=</code></td>
-                                        <td><code>x /= y</code></td>
-                                        <td><code>x = x / y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>%=</code></td>
-                                        <td><code>x %= y</code></td>
-                                        <td><code>x = x % y</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>**=</code></td>
-                                        <td><code>x **= y</code></td>
-                                        <td><code>x = x ** y</code></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <!-- Source label -->
-                        <div class="text-end fst-italic small text-muted">
-                            Source: W3Schools
-                        </div>
+                            <h6 class="mt-2">Assignment Operators</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th class="w-20">Operator</th>
+                                            <th class="w-40">Example</th>
+                                            <th class="w-40">Same As</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>=</code></td>
+                                            <td><code>x = y</code></td>
+                                            <td><code>x = y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>+=</code></td>
+                                            <td><code>x += y</code></td>
+                                            <td><code>x = x + y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>-=</code></td>
+                                            <td><code>x -= y</code></td>
+                                            <td><code>x = x - y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>*=</code></td>
+                                            <td><code>x *= y</code></td>
+                                            <td><code>x = x * y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>/=</code></td>
+                                            <td><code>x /= y</code></td>
+                                            <td><code>x = x / y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>%=</code></td>
+                                            <td><code>x %= y</code></td>
+                                            <td><code>x = x % y</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>**=</code></td>
+                                            <td><code>x **= y</code></td>
+                                            <td><code>x = x ** y</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Source label -->
+                            <div class="text-end fst-italic small text-muted">
+                                Source: W3Schools
+                            </div>
 
-                        <h6 class="mt-2">Comparison Operators</h6>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Operator</th>
-                                        <th>Description</th>
-                                        <th>Example</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>==</code></td>
-                                        <td>equal to</td>
-                                        <td><code>x == 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>===</code></td>
-                                        <td>equal value and equal type</td>
-                                        <td><code>x === 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>!=</code></td>
-                                        <td>not equal</td>
-                                        <td><code>x != 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>!==</code></td>
-                                        <td>not equal value or not equal type</td>
-                                        <td><code>x !== 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>&gt;</code></td>
-                                        <td>greater than</td>
-                                        <td><code>x &gt; 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>&lt;</code></td>
-                                        <td>less than</td>
-                                        <td><code>x &lt; 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>&gt;=</code></td>
-                                        <td>greater than or equal to</td>
-                                        <td><code>x &gt;= 5</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>&lt;=</code></td>
-                                        <td>less than or equal to</td>
-                                        <td><code>x &lt;= 5</code></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            <h6 class="mt-2">Comparison Operators</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th class="w-20">Operator</th>
+                                            <th class="w-40">Description</th>
+                                            <th class="w-40">Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>==</code></td>
+                                            <td>equal to</td>
+                                            <td><code>x == 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>===</code></td>
+                                            <td>equal value and equal type</td>
+                                            <td><code>x === 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>!=</code></td>
+                                            <td>not equal</td>
+                                            <td><code>x != 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>!==</code></td>
+                                            <td>not equal value or not equal type</td>
+                                            <td><code>x !== 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&gt;</code></td>
+                                            <td>greater than</td>
+                                            <td><code>x &gt; 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;</code></td>
+                                            <td>less than</td>
+                                            <td><code>x &lt; 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&gt;=</code></td>
+                                            <td>greater than or equal to</td>
+                                            <td><code>x &gt;= 5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;=</code></td>
+                                            <td>less than or equal to</td>
+                                            <td><code>x &lt;= 5</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <!-- Source label -->
-                        <div class="text-end fst-italic small text-muted">
-                            Source: W3Schools
-                        </div>
+                            <!-- Source label -->
+                            <div class="text-end fst-italic small text-muted">
+                                Source: W3Schools
+                            </div>
 
-                        <h6 class="mt-2">Logical Operators</h6>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover align-middle">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>Operator</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><code>&amp;&amp;</code></td>
-                                        <td>logical and</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>||</code></td>
-                                        <td>logical or</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>!</code></td>
-                                        <td>logical not</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            <h6 class="mt-2">Logical Operators</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th class="w-20">Operator</th>
+                                            <th class="w-80">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&amp;&amp;</code></td>
+                                            <td>logical and</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>||</code></td>
+                                            <td>logical or</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>!</code></td>
+                                            <td>logical not</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        <div class="text-end fst-italic small text-muted">
-                            Source: W3Schools
+                            <div class="text-end fst-italic small text-muted">
+                                Source: W3Schools
+                            </div>
                         </div>
                     </div>
                 </div>

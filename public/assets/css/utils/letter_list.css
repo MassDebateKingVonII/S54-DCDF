@@ -7,5 +7,4 @@
 
 .letter-list li::marker {
     content: counter(list-item, lower-alpha) ") ";
-    font-weight: bold;
 }
