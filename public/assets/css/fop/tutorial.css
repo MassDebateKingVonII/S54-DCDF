@@ -1,8 +1,0 @@
-pre {
-    max-height: 80vh;   /* limit the number of lines visible */
-    overflow-y: auto;    /* vertical scrollbar if too many lines */
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 1rem;
-    background: #f9f9f9;
-}

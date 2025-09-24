@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FOP - Tutorial</title>
-
-        <!-- BS5 -->
-        <script src="/assets/js/general/injectBootstrap.js" type="text/javascript" defer></script>
-
-        <!-- Custom Elements -->
-        <script src="/assets/js/general/injectNavbar.js" type="text/javascript" defer></script>
-        <script src="/assets/js/general/injectFooter.js" type="text/javascript" defer></script>
-
-        <script src="/assets/js/general/injectCustom.js" type="text/javascript" defer></script>
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/assets/css/general/prism.css">
-        <link rel="stylesheet" href="/assets/css/fop/navigation.css">
-        <link rel="stylesheet" href="/assets/css/fop/tutorial.css">
-        <link rel="stylesheet" href="/assets/css/fop/practical.css">
-
-        <!-- Custom JS -->
-        <script src="/assets/js/general/prism.js" type="text/javascript" defer></script>
-        <script src="/assets/js/fop/navigation.js" type="text/javascript" defer></script>
+        <script src="/assets/js/general/injectHead.js" defer></script>
+        <script src="/assets/js/fop/sidebar.js" defer></script>
     </head>
     <body>
         <div id="navbar"></div>
@@ -31,7 +13,7 @@
                     <!-- Left side navigation -->
                     <div id="fop-sidebar"></div>
 
-                    <div class="col-md-9 col-sm-12 mt-3">
+                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
                         <h2 class="fw-bold">
                             <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 3 - Operator Precedence
                         </h2>
@@ -489,8 +471,43 @@
                         <h2 class="fw-bold mt-5">Practical 2 - Operators</h2>
                         <hr>
 
-                        <h5 class="mt-4 mb-2">Questions:</h5>
-                        <embed src="/assets/documents/fop/prac_2/questions.pdf">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">Questions</h4>
+                                <button class="btn btn-sm btn-outline-primary d-flex align-items-center" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#Questions">
+                                    <i class="bi bi-chevron-down rotate-icon"></i>
+                                </button>
+                            </div>
+
+                            <div id="Questions" class="collapse">
+                                <div class="card-body">
+                                    <embed src="/assets/documents/fop/prac_2/questions.pdf">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">Answers</h4>
+                                <button class="btn btn-sm btn-outline-primary d-flex align-items-center" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#Answers">
+                                    <i class="bi bi-chevron-down rotate-icon"></i>
+                                </button>
+                            </div>
+
+                            <div id="Answers" class="collapse">
+                                <div class="card-body">
+
+                                    <h4>Q1)</h4>
+                                    <ol class="letter-list">
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
 
                         <h5 class="mt-5">Answer Key:</h5>
                         <pre class="line-numbers">

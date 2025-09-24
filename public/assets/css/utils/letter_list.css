@@ -1,0 +1,11 @@
+/* Show a), b), c) instead of a., b., c. */
+.letter-list {
+    list-style-type: lower-alpha;
+    /* a, b, c */
+    padding-left: 1.5rem;
+}
+
+.letter-list li::marker {
+    content: counter(list-item, lower-alpha) ") ";
+    font-weight: bold;
+}

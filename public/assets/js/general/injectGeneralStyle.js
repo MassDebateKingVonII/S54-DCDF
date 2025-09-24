@@ -9,7 +9,7 @@ styleCSS.href = '/assets/css/style.css';
 
 document.head.appendChild(styleCSS);
 
-// injects Favicon
+// Injects Favicon
 const link = document.createElement("link");
 link.rel = "icon";
 link.type = "image/png";

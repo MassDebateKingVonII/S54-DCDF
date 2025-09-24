@@ -1,0 +1,23 @@
+.icon-small {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.icon-medium {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.icon-large {
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
