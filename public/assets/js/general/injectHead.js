@@ -39,7 +39,6 @@
         const s = document.createElement('script');
         s.type = "text/javascript"
         s.src = src;
-        s.defer = true;
         head.appendChild(s);
     });
 
