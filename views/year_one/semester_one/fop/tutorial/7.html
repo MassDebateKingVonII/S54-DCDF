@@ -2,10 +2,19 @@
 <html>
     <head>
         <title>FOP - Tutorial</title>
+        <script src="/assets/js/general/preLoader.js" defer></script>
         <script src="/assets/js/general/injectHead.js" defer></script>
         <script src="/assets/js/fop/sidebar.js" defer></script>
     </head>
     <body>
+        <!-- Preloader overlay -->
+        <div id="preloader"
+            style="position: fixed; inset: 0; background: white; display:flex; justify-content:center; align-items:center; z-index:2000;">
+            <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
         <div id="navbar"></div>
         <main class="page-content mb-5">
             <div class="container-lg">
@@ -13,82 +22,16 @@
                     <!-- Left side navigation -->
                     <div id="fop-sidebar"></div>
 
-                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
+                    <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 7 - Array
+                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 7 - Object Literals And Methods
                         </h2>
                         <hr>
-                        <p class="mt-5">An array is useful to store many items or variables into one single name.</p>
-                        <p>An array contains elements which can be a variable or an object, 
-                            which have their own position (index) inside the array. 
-                            The position (index) of an array starts and counts from 0.
-                            The first element of an array is at index 0 if array is not empty.
-                        </p>
-                        <p>Moreover, an array is considered to be an object in JavaScript.</p>
-                        <p class="mb-0">Syntax</p>
-                        <pre>
-                            <code class="language-javascript">
-                                // Best practise to declare an array using const keyword
-                                const testArr = [el1, el2, el3, ...];
-                            </code>
-                        </pre>
-                        <p class="mt-4">An element can be accessed in the array. 
-                            Assuming the array variable name is <code>someArr</code>, then
-                        </p>
-                        <pre>
-                            <code class="language-javascript">
-                                someArr[x]; // where x is a valid index (an integer >= 0)
-                            </code>
-                        </pre>
-                        <p class="mt-2 mb-0">Example:</p>
-                        <pre>
-                            <code class="language-javascript">
-                                const someArr = [1, 2, 3, true];
-
-                                console.log(someArr[0]); // Output is 1
-                                console.log(someArr[3]); //Output is true
-                            </code>
-                        </pre>
-
-                        <p class="mt-4">These are the exam-tested array methods: </p>
-                        <pre>
-                            <code class="language-javascript">
-                                // length: gets the total length of the array
-                                const test = [1, "string"];
-
-                                console.log(test.length); // Output is 2
-
-                                // push(): Adds an element to the right of the array
-                                test.push(1000);
-                                // [1, "string", 1000]
-
-                                console.log(test.length) // Now output is 3
-
-                                // pop(): Removes the element at the last index of the array
-                                test.pop();
-
-                                // [1, "string"]
-                                console.log(test.length) // Now output is 2
-
-                            </code>
-                        </pre>
-                        <p>A complete reference can be found <a href="https://www.w3schools.com/js/js_array_reference.asp">here</a>. This list have additional methods that will not come out for the exam.</p>
-
-                        <p class="mt-4">An element can be changed like so: </p>
-                        <pre>
-                            <code class="language-javascript">
-                                const arr = [1, 2, 4, true, "string"];
-
-                                arr[3] = "changedFromBoolean";
-                            </code>
-                        </pre>
-
-                        <!-- Practical -->
 
                         <h2 class="fw-bold mt-5">
-                            <i class="bi bi-receipt-cutoff"></i> Practical 5 - Array
+                            <i class="bi bi-receipt-cutoff"></i> Practical 7 - Object Literals And Methods
                         </h2>
-                        <hr></hr>
+                        <hr>
 
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
@@ -101,7 +44,7 @@
 
                             <div id="Questions" class="collapse">
                                 <div class="card-body">
-                                    <embed src="/assets/documents/fop/prac_5/questions.pdf">
+                                    <embed src="/assets/documents/fop/prac_7/questions.pdf">
                                 </div>
                             </div>
                         </div>
@@ -121,9 +64,11 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </main>
         <div id="footer"></div>
     </body>

@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>S54 - DCDF</title>
-        
-        <!-- BS5 -->
-        <script src="/assets/js/general/injectBootstrap.js" type="text/javascript" defer></script>
-
-        <!-- Custom Elements -->
-        <script src="/assets/js/general/injectNavbar.js" type="text/javascript" defer></script>
-        <script src="/assets/js/general/injectFooter.js" type="text/javascript" defer></script>
-        <script src="/assets/js/general/injectGeneralStyle.js" type="text/javascript" defer></script>
-
-        <!--Utils CSS -->
-        <script src="/assets/js/general/injectUtilCss.js" type="text/javascript" defer></script>
-        
+        <title>FOP - Tutorial</title>
+        <script src="/assets/js/general/preLoader.js" defer></script>
+        <script src="/assets/js/general/injectHead.js" defer></script>
     </head>
     <body>
+        <!-- Preloader overlay -->
+        <div id="preloader"
+            style="position: fixed; inset: 0; background: white; display:flex; justify-content:center; align-items:center; z-index:2000;">
+            <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
         <div id="navbar"></div>
         <main class="page-content">
             <div class="container-lg mt-5 mb-3">

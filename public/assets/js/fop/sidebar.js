@@ -13,7 +13,7 @@ document.getElementById("fop-sidebar").innerHTML = `
 <div id="left-navbar-navigation" class="bg-light position-sticky top-0 p-2">
     <a class="navbar-brand w-100 text-center mb-3" href="#">
         <img src="/assets/images/fop/banner.png" class="img-fluid">
-        <h3 class="mt-2">ST0253 - FOP</h3>
+        <h3 class="mt-2">ST0523 - FOP</h3>
     </a>
 
     <div class="nav flex-column nav-pills w-100" role="tablist">
@@ -27,19 +27,20 @@ document.getElementById("fop-sidebar").innerHTML = `
             <ul class="dropdown-menu w-100" aria-labelledby="tutorialDropdown">
                 <li><a class="dropdown-item" href="/fop/tut/1">1 - Data Types</a></li>
                 <li><a class="dropdown-item" href="/fop/tut/2">2 - Operators</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/3">3 - Operator Precedence</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/4">4 - Looping</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/5">5 - Functions</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/6">6 - Conditional Programming</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/7">7 - Array</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/8">8 - Object Literals And Methods</a></li>
-                <li><a class="dropdown-item" href="/fop/tut/9">9 - Array Of Objects</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/3">3 - Looping</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/4">4 - Functions</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/5">5 - Conditional Programming</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/6">6 - Array</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/7">7 - Object Literals And Methods</a></li>
+                <li><a class="dropdown-item" href="/fop/tut/8">8 - Array Of Objects</a></li>
             </ul>
         </div>
 
         <a class="nav-link w-100" href="/fop/notes">Special Notes</a>
 
         <a class="nav-link w-100" href="/fop/papers">Mock Papers</a>
+        <a class="nav-link w-100" href="/fop/credits">References & Credits</a>
+
     </div>
 </div>`;
 

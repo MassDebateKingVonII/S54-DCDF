@@ -2,10 +2,19 @@
 <html>
     <head>
         <title>FOP - Tutorial</title>
+        <script src="/assets/js/general/preLoader.js" defer></script>
         <script src="/assets/js/general/injectHead.js" defer></script>
         <script src="/assets/js/fop/sidebar.js" defer></script>
     </head>
     <body>
+        <!-- Preloader overlay -->
+        <div id="preloader"
+            style="position: fixed; inset: 0; background: white; display:flex; justify-content:center; align-items:center; z-index:2000;">
+            <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        
         <div id="navbar"></div>
         <main class="page-content mb-5">
             <div class="container-lg">
@@ -15,130 +24,44 @@
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 4 - Looping
+                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 4 - Functions
                         </h2>
                         <hr>
-                        <p>Loops can execute a block of code a number of times.
-                            Loops are useful to run cover over and over again. It is often paired with
-                            indexing arrays.
-                        </p>
-                        <p>There are multiple ways to write a loop in JavaScript. The primary ones are: </p>
-                        <h4 class="fw-bold"><u>1. For Loop</u></h4>
-                        </p>
                         
                         <div class="p-3">
                             <h5>
                                 <i class="bi bi-binoculars-fill"></i> Overview
                             </h5>
-                            <p>
-                                A for loop is a control structure in programming that lets you repeat a 
-                                block of code a fixed number of times or iterate through a sequence 
-                                (like numbers, arrays, or strings)
-                            </p>
-                            <p>It usually has three main parts:</p>
-                            <ol>
-
-                                <li>Initialization – sets a starting point (e.g., let i = 0;).</li>
-                                <li>Condition – checked before each loop run; if true, the loop continues (e.g., i < 5).</li>
-                                <li>Increment/Decrement – updates the loop variable each time (e.g., i++).</li>
-                            </ol>
-
+                            <p>A function in programming is a reusable block of code designed to 
+                                perform a specific task. Functions help organize code, 
+                                avoid repetition, and make programs easier to read and maintain.</p>
                             <h5><i class="bi bi-tools"></i> Syntax</h5>
                             <pre>
                                 <code class="language-javascript">
-                                    for (expr1; expr2; expr) {
-                                        // code block to be executed
+                                    function name(param1, param2, param3) {
+                                        ....
                                     }
                                 </code>
                             </pre>
-                            <p>Note: There are 3 optional expressions</p>
+                            <p>Note: There can be any number of parameters you want.</p>
 
-                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Example</h5>
-                            <p class="my-0">Scenario: I want to print "Hello World" 100 times.</p>
-                            <pre class="line-numbers">
-                                <code class="language-javascript">
-                                    for (let i = 0; i < 100; i++) {
-                                        console.log("Hello World");
-                                    }
-                                </code>
-                            </pre>
-                        </div>
-
-                        <h4 class="fw-bold"><u>2. While Loop</u></h4>
-                        <div class="p-3">
-                            <h5>
-                                <i class="bi bi-binoculars-fill"></i> Overview
+                            <h5 class="mt-0">
+                                <i class="bi bi-bookmark-check-fill"></i> Examples
                             </h5>
-                            <p>
-                                A while loop is a control structure in programming that repeats a 
-                                block of code as long as a certain condition is true. 
-                                Unlike a for loop, you don’t need to know in advance how 
-                                many times the loop will run.
-                            </p>
-
-                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <p class="mt-3 mb-0"><b>Scenario</b>: Make a function that sums two numbers</p>
                             <pre>
                                 <code class="language-javascript">
-                                    while (condition) {
-                                        // code block to be executed
+                                    function sum(x,y) {
+                                        return x + y;
                                     }
-                                </code>
-                            </pre>
 
-                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Example</h5>
-                            <p class="my-0">Scenario: I want to print "Hello World" 100 times.</p>
-                            <pre class="line-numbers">
-                                <code class="language-javascript">
-                                    let x = 0;
-
-                                    while (x < 100) {
-                                        x++;
-                                        console.log("Hello World");
-                                    }
+                                    // The line below sum(10, 11) is an invocation of the function sum(x,y)
+                                    console.log(sum(10, 11)); // Output is 21
                                 </code>
                             </pre>
                         </div>
 
-                        <h4 class="fw-bold"><u>3. Do While Loop</u></h4>
-                        <div class="p-3">
-                            <h5>
-                                <i class="bi bi-binoculars-fill"></i> Overview
-                            </h5>
-                            <p>
-                                A do…while loop is similar to a while loop, but with 
-                                one key difference: the loop body executes at least <b>once</b>, 
-                                even if the condition is false at the start. 
-                                The condition is checked after the loop body runs.
-                            </p>
-                            <h5><i class="bi bi-tools"></i> Syntax</h5>
-                            <pre>
-                                <code class="language-javascript">
-                                    do {
-                                        // Code block to be executed
-                                    } while (condition)
-                                </code>
-                            </pre>
-
-                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Example</h5>
-                            <p class="my-0">Scenario: Print "Hello" 10 times if value of 0 <= x < 10. Else print once. Use while loops.</p>
-                            <pre class="line-numbers">
-                                <code class="language-javascript">
-                                let x = 10;
-
-                                do {
-                                    console.log("This will print at least once!");
-                                    x++;
-                                } while (x < 10 && x >= 0);
-
-                                console.log("Loop finished. x =", x);
-
-                                </code>
-                            </pre>
-                        </div>
-
-                        <h2 class="fw-bold mt-5">
-                            <i class="bi bi-receipt-cutoff"></i> Practical 3 - Looping
-                        </h2>
+                        <h2 class="fw-bold mt-5">Practical 4 - Functions</h2>
                         <hr>
 
                         <div class="card">
@@ -152,14 +75,7 @@
 
                             <div id="Questions" class="collapse">
                                 <div class="card-body">
-                                    <h4>For Loop</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions.pdf">
-
-                                    <h4>Do While Loop</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions2.pdf">
-
-                                    <h4>Nested Loops</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions3.pdf">
+                                    <embed src="/assets/documents/fop/prac_4/questions.pdf">
                                 </div>
                             </div>
                         </div>
@@ -185,4 +101,4 @@
         </main>
         <div id="footer"></div>
     </body>
-</html>
+</html>                            
