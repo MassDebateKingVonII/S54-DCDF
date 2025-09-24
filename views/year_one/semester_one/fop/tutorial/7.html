@@ -20,16 +20,234 @@
                     <div id="fop-sidebar"></div>
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
+                        <h4>
+                            
+                        </h4>
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 7 - Object Literals And Methods
+                            <i class="bi bi-mortarboard-fill"></i> Tutorial 7 - Object Literals And Methods
                         </h2>
                         <hr>
+
+                        <h3>
+                            <i class="bi bi-binoculars-fill"></i> Overview
+                        </h3>
+                        <p>
+                            In this tutorial, you will learn about object literals,
+                            which allow you to group related data and functions 
+                            together. You will explore how to create objects, 
+                            access and update their properties, and define methods
+                            to perform actions on the object’s data.
+                        </p>
+
+                        <div class="px-3">
+
+                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    // Preferably declare an object using const
+                                    const obj = {
+                                        k1: v1,
+                                        k2: v2,
+                                        k3: v3,
+                                          .
+                                          .
+                                        kx: vx
+                                    }
+                                </code>
+                            </pre>
+
+                            <p>Note: Objects are a set of key-pair values. Each key is known 
+                                as a property. There can be as many key-pair values.
+                            </p>
+
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    // I want to describe a car but with multiple variables
+                                    // Using objects is the best way
+                                    const car1 = {
+                                        color: "red",
+                                        isOld: "false",
+                                        cost: 10000
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5">Accessing Property</h4>
+                        <p>
+                            A property is also known as its key in more formal terms.
+                            A key is required to access a value. There are two ways to
+                            access a property/value:
+                        </p>
+
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-tools"></i> Syntax
+                            </h5>
+
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const obj = {
+                                        key: value,
+                                           .
+                                           .
+                                    }
+
+                                    // METHOD 1:
+                                    obj.key;
+
+                                    // METHOD 2:
+                                    obj["key"];
+                                </code>
+                            </pre>
+
+                            <h5 class="mt-3">
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <p>
+                                <b>Scenario</b>: I want to access the color 
+                                property of a card object
+                            </p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const car = {
+                                        color: red,
+                                        cost: 100000,
+                                        isOld: true
+                                    }
+
+                                    // METHOD 1:
+                                    car.color;
+
+                                    // METHOD 2:
+                                    car["color"];
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5"><code>this</code> Keyword</h4>
+                        <p class="mt-3">
+                            In JavaScript, the <code>this</code> keyword refers to an object.
+                        </p>
+                        <p>
+                            The <code>this</code> keyword refers to different objects depending on how it is used:
+                        </p>
+                        <ul class="list-group list-group-flush px-3">
+                            <li class="list-group-item">When used alone, <code>this</code> refers to the global object.</li>
+                            <li class="list-group-item">Inside a regular function, <code>this</code> also refers to the global object.</li>
+                            <li class="list-group-item">Inside a function in strict mode, <code>this</code> is <code>undefined</code>.</li>
+                            <li class="list-group-item">Inside an object method, <code>this</code> refers to the object itself.</li>
+                            <li class="list-group-item">In an event handler, <code>this</code> refers to the element that received the event.
+                            </li>
+                        </ul>
+
+                        <div class="px-3 mt-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Examples
+                            </h5>
+
+                            <p><b>Scenario A</b>: <code>this</code> in a Method</p>
+                            <p class="mt-2">When used in an object method, <code>this</code> refers to the object.</p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const person = {
+                                        firstName: "John",
+                                        lastName : "Doe",
+                                        id : 5566,
+                                        fullName : function() {
+                                        return this.firstName + " " + this.lastName;
+                                        }
+                                    };
+                                </code>
+                            </pre>
+                            <p>In this scenario, <code>this</code> refers to the <b>person</b> object. 
+                                Since, <b>fullName</b> method is a method of the <b>person</b> object.
+                            </p>
+
+                            <p><b>Scenario B</b>: Object Method Binding</p>
+                            <p class="mt-2">
+                                Basically, here, the object is trying to refer to itself via
+                               <code>this</code> keyword.
+                            </p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const person = {
+                                        firstName: "John",
+                                        lastName : "Doe",
+                                        id       : 5566,
+                                        fullName : function() {
+                                            return this.firstName + " " + this.lastName;
+                                        }
+                                    };
+                                </code>
+                            </pre>
+                            <p>
+                                In this example, <b>this.firstName</b> is the 
+                                firstName property of <b>this</b> (the person object).
+                            </p>
+
+                        </div>
+
+
+                        <h4 class="mt-5">Methods</h4>
+                        <p class="mt-3">
+                            A function that is contained within an object as a key-pair value,
+                            is considered a method.
+                        </p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-tools"></i> Syntax
+                            </h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const obj = {
+                                        method1: function() {
+                                            console.log("Hello!");
+                                        }
+                                    }
+                                </code>
+                            </pre>
+
+
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <p class="mt-3">Make a method saying 
+                                "Welcome back, (name)" for a user object.
+                            </p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    // Example user object
+                                    const user1 = {
+                                        age: 10,
+                                        weight: 35kg,
+                                        name: "John",
+                                        // Method Below
+                                        greetUser: function() {
+                                            console.log("Welcome back, " + this.name);
+                                        }
+                                    }
+                                </code>
+                            </pre>
+
+                            <p>Note: The <code>this.name</code> refers to the user1 object.</p>
+                        </div>
+
 
                         <h2 class="fw-bold mt-5">
                             <i class="bi bi-receipt-cutoff"></i> Practical 7 - Object Literals And Methods
                         </h2>
                         <hr>
-
+                        <p class="text-muted fst-italic">
+                            This practical introduces object literals, which allow 
+                            you to group related data and functions together. 
+                            You will learn how to define objects, access their 
+                            properties, and create methods to perform actions on 
+                            the object’s data.
+                        </p>
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h4 class="mb-0">Questions</h4>

@@ -21,9 +21,13 @@
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 3 - Looping
+                            <i class="bi bi-mortarboard-fill"></i> Tutorial 3 - Looping
                         </h2>
                         <hr>
+
+                        <h3>
+                            <i class="bi bi-binoculars-fill"></i> Overview
+                        </h3>
                         <p>Loops can execute a block of code a number of times.
                             Loops are useful to run cover over and over again. It is often paired with
                             indexing arrays.
@@ -32,10 +36,7 @@
                         <h4 class="fw-bold"><u>1. For Loop</u></h4>
                         </p>
                         
-                        <div class="p-3">
-                            <h5>
-                                <i class="bi bi-binoculars-fill"></i> Overview
-                            </h5>
+                        <div class="px-3">
                             <p>
                                 A for loop is a control structure in programming that lets you repeat a 
                                 block of code a fixed number of times or iterate through a sequence 
@@ -70,11 +71,8 @@
                             </pre>
                         </div>
 
-                        <h4 class="fw-bold"><u>2. While Loop</u></h4>
-                        <div class="p-3">
-                            <h5>
-                                <i class="bi bi-binoculars-fill"></i> Overview
-                            </h5>
+                        <h4 class="fw-bold mt-5"><u>2. While Loop</u></h4>
+                        <div class="px-3">
                             <p>
                                 A while loop is a control structure in programming that repeats a 
                                 block of code as long as a certain condition is true. 
@@ -105,11 +103,8 @@
                             </pre>
                         </div>
 
-                        <h4 class="fw-bold"><u>3. Do While Loop</u></h4>
-                        <div class="p-3">
-                            <h5>
-                                <i class="bi bi-binoculars-fill"></i> Overview
-                            </h5>
+                        <h4 class="fw-bold mt-5"><u>3. Do While Loop</u></h4>
+                        <div class="px-3">
                             <p>
                                 A do…while loop is similar to a while loop, but with 
                                 one key difference: the loop body executes at least <b>once</b>, 
@@ -146,6 +141,13 @@
                             <i class="bi bi-receipt-cutoff"></i> Practical 3 - Looping
                         </h2>
                         <hr>
+                        <p class="text-muted fst-italic">
+                            In this practical, you will explore different types of 
+                            loops in programming, including For Loops, Do While 
+                            Loops, and Nested Loops. You will learn how to control 
+                            iteration, repeat tasks efficiently, and apply looping 
+                            techniques to solve problems.
+                        </p>
 
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
@@ -158,14 +160,46 @@
 
                             <div id="Questions" class="collapse">
                                 <div class="card-body">
-                                    <h4>For Loop</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions.pdf">
+                                    <div class="accordion" id="loopsAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingForLoop">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForLoop" aria-expanded="false" aria-controls="collapseForLoop">
+                                            For Loop
+                                        </button>
+                                        </h2>
+                                        <div id="collapseForLoop" class="accordion-collapse collapse" aria-labelledby="headingForLoop" data-bs-parent="#loopsAccordion">
+                                        <div class="accordion-body">
+                                            <embed src="/assets/documents/fop/prac_3/questions.pdf" type="application/pdf" width="100%" height="500px">
+                                        </div>
+                                        </div>
+                                    </div>
 
-                                    <h4>Do While Loop</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions2.pdf">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingDoWhile">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoWhile" aria-expanded="false" aria-controls="collapseDoWhile">
+                                            Do While Loop
+                                        </button>
+                                        </h2>
+                                        <div id="collapseDoWhile" class="accordion-collapse collapse" aria-labelledby="headingDoWhile" data-bs-parent="#loopsAccordion">
+                                        <div class="accordion-body">
+                                            <embed src="/assets/documents/fop/prac_3/questions2.pdf" type="application/pdf" width="100%" height="500px">
+                                        </div>
+                                        </div>
+                                    </div>
 
-                                    <h4>Nested Loops</h4>
-                                    <embed src="/assets/documents/fop/prac_3/questions3.pdf">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingNestedLoops">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNestedLoops" aria-expanded="false" aria-controls="collapseNestedLoops">
+                                            Nested Loops
+                                        </button>
+                                        </h2>
+                                        <div id="collapseNestedLoops" class="accordion-collapse collapse" aria-labelledby="headingNestedLoops" data-bs-parent="#loopsAccordion">
+                                        <div class="accordion-body">
+                                            <embed src="/assets/documents/fop/prac_3/questions3.pdf" type="application/pdf" width="100%" height="500px">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -181,8 +215,53 @@
 
                             <div id="Answers" class="collapse">
                                 <div class="card-body">
-                                    <h6 class="fw-bold text-decoration-underline">For Loop</h6>
-                                    
+                                    <div class="accordion" id="loopsAccordion-ans">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingForLoop">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseForLoop-ans">
+                                                    For Loop
+                                                </button>
+                                            </h2>
+                                            <div id="collapseForLoop-ans" class="accordion-collapse collapse"
+                                                data-bs-parent="#loopsAccordion-ans">
+                                                <div class="accordion-body">
+                                                    Content for For Loop goes here.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingDoWhile-ans">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseDoWhile-ans">
+                                                    Do While
+                                                </button>
+                                            </h2>
+                                            <div id="collapseDoWhile-ans" class="accordion-collapse collapse"
+                                                data-bs-parent="#loopsAccordion-ans">
+                                                <div class="accordion-body">
+                                                    Content for Do While goes here.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingNestedLoops-ans">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseNestedLoops-ans">
+                                                    Nested Loops
+                                                </button>
+                                            </h2>
+                                            <div id="collapseNestedLoops-ans" class="accordion-collapse collapse"
+                                                data-bs-parent="#loopsAccordion-ans">
+                                                <div class="accordion-body">
+                                                    Content for Nested Loops goes here.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

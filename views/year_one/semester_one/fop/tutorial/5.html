@@ -21,173 +21,185 @@
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 5 - Conditional Programming
+                            <i class="bi bi-mortarboard-fill"></i> Tutorial 5 - Conditional Programming
                         </h2>
                         <hr>
-                        <p class="mt-5">
+                        <h3>
+                            <i class="bi bi-binoculars-fill"></i> Overview
+                        </h3>
+                        <p>
                         Conditional programming is here you want to execute something only if it matches something or a set of conditions.
                         This is achieved via <code>if else</code> or <code>case switch</code> statements in JavaScript.
                         </p>
-                        <div class="ms-2 mt-3">
-                            <h4 class="fw-bold"><u>1. If...Else</u></h4>
-                            <p><code>If Else</code> statements are the simplest way to create conditional programming. 
-                                It can be used to check more than 1 conditions and/or be nested.</p>
-                            <div class="p-3">
-                                <h5 class="mb-0"><i class="bi bi-tools"></i> Syntax</h5>
-                                <pre>
-                                    <code class="language-javascript">
-                                        if (condition1) {
+                        <h4 class="fw-bold"><u>1. If...Else</u></h4>
+                        <p><code>If Else</code> statements are the simplest way to create conditional programming. 
+                            It can be used to check more than 1 conditions and/or be nested.</p>
+                        <div class="px-3">
+                            <h5 class="mb-0"><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre>
+                                <code class="language-javascript">
+                                    if (condition1) {
 
-                                        } else if (condition2) {
+                                    } else if (condition2) {
 
-                                        } ... // as many else if statements as you want
+                                    } ... // as many else if statements as you want
+                                    } else {
+
+                                    }
+                                </code>
+                            </pre>
+
+                            <h5 class="mt-3">
+                                <i class="bi bi-bookmark-check-fill"></i> Examples
+                            </h5>
+
+                            <p class="mt-3"><b>Scenario 1</b>: Print "Hooray" if number given by user is greater than or equal to 100. Quit the program if condition is not matched.</p>
+                            <pre>
+                                <code class="language-javascript">
+
+                                    // This must be at the top
+                                    const reader = require('readline-sync');
+
+                                    let input = reader.question("Enter a number: ");
+
+                                    // A function to return a boolean whether number is >= 100
+                                    function checkNum(number) {
+                                        // This below, either gives false or true
+                                        return(number>=100);
+                                    }
+
+                                    // if (true), then prints the Hooray string
+                                    if (checkNum(input)) {
+                                        console.log("Hooray")
+                                    } else {
+                                        return;
+                                    }
+                                </code>
+                            </pre>
+                            <p class="mt-3"><b>Scenario 2</b>: Print "Hooray" if number given by user is <b>equal to 10 or 20</b> or 
+                                is a number that is both <b>divisible by 3 and 5</b>. 
+                                Moreover, it will print "Oh No!" if it is <b>NaN</b>. Quit the program if condition is not matched.
+                            </p>
+                            <pre>
+                                <code class="language-javascript">
+
+                                    // This must be at the top
+                                    const reader = require('readline-sync');
+
+                                    let input = reader.question("Enter a number: ");
+
+                                    // A function to return a boolean whether input is a valid number
+                                    function validateNum(number) {
+                                        // This below, either gives false or true
+                                        // if true, it is a number
+                                        // if false, it is not a number
+                                        return !isNaN(number);
+
+                                        // IMPORTANT: take note of the "!", boolean value returned is inverted
+                                    }
+
+                                    function processNum(number) {
+                                        // Here shows else if being used
+                                        if (number === 10 || number === 20) {
+                                            return true;
+                                        } else if (number % 3 === 0 && number % 5 === 0) {
+                                            return true;
                                         } else {
-
+                                            return false;
                                         }
-                                    </code>
-                                </pre>
+                                    }
 
-                                <h5 class="mt-3">
-                                    <i class="bi bi-bookmark-check-fill"></i> Examples
-                                </h5>
-
-                                <p class="mt-3"><b>Scenario 1</b>: Print "Hooray" if number given by user is greater than or equal to 100. Quit the program if condition is not matched.</p>
-                                <pre>
-                                    <code class="language-javascript">
-
-                                        // This must be at the top
-                                        const reader = require('readline-sync');
-
-                                        let input = reader.question("Enter a number: ");
-
-                                        // A function to return a boolean whether number is >= 100
-                                        function checkNum(number) {
-                                            // This below, either gives false or true
-                                            return(number>=100);
-                                        }
-
-                                        // if (true), then prints the Hooray string
-                                        if (checkNum(input)) {
-                                            console.log("Hooray")
+                                    // Below shows nesting of if else statements
+                                    if (validateNum(input)) {
+                                        if (processNum(input)) {
+                                            console.log("Hooray");
                                         } else {
                                             return;
                                         }
-                                    </code>
-                                </pre>
-                                <p class="mt-3"><b>Scenario 2</b>: Print "Hooray" if number given by user is <b>equal to 10 or 20</b> or 
-                                    is a number that is both <b>divisible by 3 and 5</b>. 
-                                    Moreover, it will print "Oh No!" if it is <b>NaN</b>. Quit the program if condition is not matched.
-                                </p>
-                                <pre>
-                                    <code class="language-javascript">
+                                    } else {
+                                        console.log("Oh No!");
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <h4 class="fw-bold mt-5"><u>2. Case...Switch</u></h4>
+                        <p>This is useful, if you want better code readability, dealing 
+                            with multiple conditions and reducing chaining of <code>if else</code> statements.
+                        </p>
 
-                                        // This must be at the top
-                                        const reader = require('readline-sync');
+                        <div class="px-3">
+                            <h5><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre class="line-number">
+                                <code class="language-javascript">
+                                    // cases are to match the expression
+                                    // If it match, the code block under the case will run
+                                    switch(expression) {
+                                        case x:
+                                        // code block
+                                        break;
+                                        case y:
+                                        // code block
+                                        break;
+                                        default:
+                                        // code block
+                                    }
+                                </code>
+                            </pre>
 
-                                        let input = reader.question("Enter a number: ");
-
-                                        // A function to return a boolean whether input is a valid number
-                                        function validateNum(number) {
-                                            // This below, either gives false or true
-                                            // if true, it is a number
-                                            // if false, it is not a number
-                                            return !isNaN(number);
-
-                                            // IMPORTANT: take note of the "!", boolean value returned is inverted
-                                        }
-
-                                        function processNum(number) {
-                                            // Here shows else if being used
-                                            if (number === 10 || number === 20) {
-                                                return true;
-                                            } else if (number % 3 === 0 && number % 5 === 0) {
-                                                return true;
-                                            } else {
-                                                return false;
-                                            }
-                                        }
-
-                                        // Below shows nesting of if else statements
-                                        if (validateNum(input)) {
-                                            if (processNum(input)) {
-                                                console.log("Hooray");
-                                            } else {
-                                                return;
-                                            }
-                                        } else {
-                                            console.log("Oh No!");
-                                        }
-                                    </code>
-                                </pre>
-                            </div>
-                            <h4 class="fw-bold mt-5"><u>2. Case...Switch</u></h4>
-                            <p>This is useful, if you want better code readability, dealing 
-                                with multiple conditions and reducing chaining of <code>if else</code> statements.
+                            <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Examples</h5>
+                            <p>
+                                <b>Scenario 1: </b>Prompt user "Enter something: ". 
+                                Print "Yummy", "Ewww", "What's that?" and "A necessary drink" for the user inputs
+                                "Mango", "Avocado", "Cricket" and "Water" respectively.
                             </p>
+                            <pre>
+                                <code class="language-javascript">
+                                    // This must be at the top
+                                    const reader = require('readline-sync');
 
-                            <div class="p-3">
-                                <h5><i class="bi bi-tools"></i> Syntax</h5>
-                                <pre class="line-number">
-                                    <code class="language-javascript">
-                                        // cases are to match the expression
-                                        // If it match, the code block under the case will run
-                                        switch(expression) {
-                                            case x:
-                                            // code block
+                                    let input = reader.question("Enter something: ");
+
+                                    // Remember to put break; statments for each case
+
+                                    switch (input) {
+                                        case "Mango": {
+                                            console.log("Yummy");
                                             break;
-                                            case y:
-                                            // code block
+                                        }
+
+                                        case "Avocado": {
+                                            console.log("Ewww");
                                             break;
-                                            default:
-                                            // code block
                                         }
-                                    </code>
-                                </pre>
 
-                                <h5 class="mt-3"><i class="bi bi-bookmark-check-fill"></i> Examples</h5>
-                                <p>
-                                    <b>Scenario 1: </b>Prompt user "Enter something: ". 
-                                    Print "Yummy", "Ewww", "What's that?" and "A necessary drink" for the user inputs
-                                    "Mango", "Avocado", "Cricket" and "Water" respectively.
-                                </p>
-                                <pre>
-                                    <code class="language-javascript">
-                                        // This must be at the top
-                                        const reader = require('readline-sync');
-
-                                        let input = reader.question("Enter something: ");
-
-                                        // Remember to put break; statments for each case
-
-                                        switch (input) {
-                                            case "Mango": {
-                                                console.log("Yummy");
-                                                break;
-                                            }
-
-                                            case "Avocado": {
-                                                console.log("Ewww");
-                                                break;
-                                            }
-
-                                            case "Cricket": {
-                                                console.log("What\'s that?");
-                                                break;
-                                            }
-
-                                            case "Water": {
-                                                console.log("A necessary drink");
-                                                break;
-                                            }
-                                            
+                                        case "Cricket": {
+                                            console.log("What\'s that?");
+                                            break;
                                         }
-                                    </code>
-                                </pre>
-                            </div>
+
+                                        case "Water": {
+                                            console.log("A necessary drink");
+                                            break;
+                                        }
+                                        
+                                    }
+                                </code>
+                            </pre>
                         </div>
 
-                        <h2 class="fw-bold mt-5">Practical 5 - If and Case Switch Statements</h2>
+
+                        <h2 class="fw-bold mt-5">
+                            <i class="bi bi-receipt-cutoff"></i> Practical 5 - If and Case Switch Statements
+                        </h2>
                         <hr>
+
+                        <p class="text-muted fst-italic">
+                            This practical introduces decision-making in 
+                            programming using If statements and Case Switch 
+                            statements. You will learn how to control the flow 
+                            of your programs by executing different blocks of code 
+                            based on specific conditions.
+                        </p>
 
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">

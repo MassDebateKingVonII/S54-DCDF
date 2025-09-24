@@ -21,42 +21,91 @@
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3">
                         <h2 class="fw-bold">
-                            <i class="bi bi-rocket-takeoff text-danger"></i> Tutorial 6 - Array
+                            <i class="bi bi-mortarboard-fill"></i> Tutorial 6 - Array
                         </h2>
                         <hr>
-                        <p class="mt-5">An array is useful to store many items or variables into one single name.</p>
+
+                        <h3>
+                            <i class="bi bi-binoculars-fill"></i> Overview
+                        </h3>
                         <p>An array contains elements which can be a variable or an object, 
                             which have their own position (index) inside the array. 
                             The position (index) of an array starts and counts from 0.
                             The first element of an array is at index 0 if array is not empty.
                         </p>
                         <p>Moreover, an array is considered to be an object in JavaScript.</p>
-                        <p class="mb-0">Syntax</p>
-                        <pre>
-                            <code class="language-javascript">
-                                // Best practise to declare an array using const keyword
-                                const testArr = [el1, el2, el3, ...];
-                            </code>
-                        </pre>
-                        <p class="mt-4">An element can be accessed in the array. 
+                        
+                        <div class="px-3">
+
+                            <h5 class="mb-0"><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre>
+                                <code class="language-javascript">
+                                    // Best practise to declare an array using const keyword
+                                    const testArr = [el1, el2, el3, ...];
+                                </code>
+                            </pre>
+                            <h5 class="mt-3">
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <pre>
+                                <code class="language-javascript">
+                                    // The array can contain variables of different data types
+                                    const arr = [1,2,3, "string", "false"];
+                                </code>
+                            </pre>  
+                        </div>
+
+                        <h4 class="mt-5">Accessing Elements</h4>
+                        <p class="mt-3">An element can be accessed in the array. 
                             Assuming the array variable name is <code>someArr</code>, then
                         </p>
-                        <pre>
-                            <code class="language-javascript">
-                                someArr[x]; // where x is a valid index (an integer >= 0)
-                            </code>
-                        </pre>
-                        <p class="mt-2 mb-0">Example:</p>
-                        <pre>
-                            <code class="language-javascript">
-                                const someArr = [1, 2, 3, true];
 
-                                console.log(someArr[0]); // Output is 1
-                                console.log(someArr[3]); //Output is true
-                            </code>
-                        </pre>
+                        <div class="px-3">
+                            <h5 class="mb-0"><i class="bi bi-tools"></i> Syntax</h5>
+                            <pre>
+                                <code class="language-javascript">
+                                    someArr[x]; // where x is a valid index (an integer >= 0)
+                                </code>
+                            </pre>
 
-                        <p class="mt-4">These are the exam-tested array methods: </p>
+                            <h5 class="mt-3">
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>                            
+                            <pre>
+                                <code class="language-javascript">
+                                    const someArr = [1, 2, 3, true];
+
+                                    console.log(someArr[0]); // Output is 1
+                                    console.log(someArr[3]); //Output is true
+                                </code>
+                            </pre>
+                        </div>
+ 
+                        <h4 class="mt-5">Changing Elements</h4>
+
+                        <p class="mt-3">
+                            Even though, an array is declared using the <code>const</code> keyword,
+                            its element can be changed, like for example:
+                        </p>
+
+                        <div class="px-3">
+                            <h5 class="mt-3">
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>  
+                            <pre>
+                                <code class="language-javascript">
+                                    const arr = [1, 2, 4, true, "string"];
+
+                                    arr[3] = "changedFromBoolean";
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5">Methods</h4>
+                        <p class="mt-3">Array methods are useful to modifying and manipulating it 
+                            to suit our needs. Methods such as push can add a new element. Below are all
+                            the methods required to know in exams:
+                        </p>
                         <pre>
                             <code class="language-javascript">
                                 // length: gets the total length of the array
@@ -78,23 +127,21 @@
 
                             </code>
                         </pre>
-                        <p>A complete reference can be found <a href="https://www.w3schools.com/js/js_array_reference.asp">here</a>. This list have additional methods that will not come out for the exam.</p>
-
-                        <p class="mt-4">An element can be changed like so: </p>
-                        <pre>
-                            <code class="language-javascript">
-                                const arr = [1, 2, 4, true, "string"];
-
-                                arr[3] = "changedFromBoolean";
-                            </code>
-                        </pre>
+                        <p class="mt-3">A complete reference can be found <a href="https://www.w3schools.com/js/js_array_reference.asp">here</a>. This list have additional methods that will not come out for the exam.</p>
 
                         <!-- Practical -->
 
                         <h2 class="fw-bold mt-5">
                             <i class="bi bi-receipt-cutoff"></i> Practical 6 - Array
                         </h2>
-                        <hr></hr>
+                        <hr>
+                        <p class="text-muted fst-italic">
+                            In this practical, you will explore arrays, which 
+                            allow you to store multiple values in a single 
+                            variable. You will learn how to declare, access, and 
+                            manipulate arrays, as well as perform common operations 
+                            such as looping through elements and updating values.
+                        </p>
 
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
