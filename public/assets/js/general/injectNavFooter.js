@@ -176,34 +176,32 @@
     </footer>
     `;
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const navbarContainer = document.getElementById("navbar");
-        if (navbarContainer && !window.navbarInjected) {
-            window.navbarInjected = true;
-            navbarContainer.innerHTML = navbarHTML;
+    const navbarContainer = document.getElementById("navbar");
+    if (navbarContainer && !window.navbarInjected) {
+        window.navbarInjected = true;
+        navbarContainer.innerHTML = navbarHTML;
 
-            // Highlight active links
-            const currentPath = window.location.pathname.toLowerCase();
-            navbarContainer.querySelectorAll('a.nav-link[data-match], a.dropdown-item[data-match]').forEach(link => {
-                const matchPath = link.getAttribute('data-match').toLowerCase();
-                const isRoot = matchPath === "/";
-                const isMatch = isRoot ? currentPath === "/" : currentPath.startsWith(matchPath);
-                if (isMatch) {
-                    link.classList.add('active');
-                    const parentDropdown = link.closest('.dropdown');
-                    if (parentDropdown) {
-                        const toggleLink = parentDropdown.querySelector('.nav-link.dropdown-toggle');
-                        if (toggleLink) toggleLink.classList.add('active');
-                    }
+        // Highlight active links
+        const currentPath = window.location.pathname.toLowerCase();
+        navbarContainer.querySelectorAll('a.nav-link[data-match], a.dropdown-item[data-match]').forEach(link => {
+            const matchPath = link.getAttribute('data-match').toLowerCase();
+            const isRoot = matchPath === "/";
+            const isMatch = isRoot ? currentPath === "/" : currentPath.startsWith(matchPath);
+            if (isMatch) {
+                link.classList.add('active');
+                const parentDropdown = link.closest('.dropdown');
+                if (parentDropdown) {
+                    const toggleLink = parentDropdown.querySelector('.nav-link.dropdown-toggle');
+                    if (toggleLink) toggleLink.classList.add('active');
                 }
-            });
-        }
+            }
+        });
+    }
 
-        const footerContainer = document.getElementById("footer");
-        if (footerContainer && !window.footerInjected) {
-            window.footerInjected = true;
-            footerContainer.innerHTML = footerHTML;
-        }
-    });
+    const footerContainer = document.getElementById("footer");
+    if (footerContainer && !window.footerInjected) {
+        window.footerInjected = true;
+        footerContainer.innerHTML = footerHTML;
+    }
     
 })();
