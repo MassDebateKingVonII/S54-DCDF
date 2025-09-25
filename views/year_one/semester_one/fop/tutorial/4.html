@@ -28,10 +28,18 @@
                         <h3>
                             <i class="bi bi-binoculars-fill"></i> Overview
                         </h3>
-                        <p>A function in programming is a reusable block of code designed to 
+                        <p>
+                            A function in programming is a reusable block of code designed to 
                             perform a specific task. Functions help organize code, 
-                            avoid repetition, and make programs easier to read and maintain.</p>
+                            avoid repetition, and make programs easier to read and maintain.
+                        </p>
+                        <p>
+                            It is important to note that functions have <b>properties</b> and 
+                            <b>methods</b>. This essentially describe them as objects.
+                        </p>
                         
+                        <h4>Declaring Functions</h4>
+                        <p>Declared functions are not used immediately, they must be invoked.</p>
                         <div class="px-3">
                             <h5><i class="bi bi-tools"></i> Syntax</h5>
                             <pre>
@@ -44,7 +52,7 @@
                             <p>Note: There can be any number of parameters you want.</p>
 
                             <h5 class="mt-0">
-                                <i class="bi bi-bookmark-check-fill"></i> Examples
+                                <i class="bi bi-bookmark-check-fill"></i> Example
                             </h5>
                             <p class="mt-3 mb-0"><b>Scenario</b>: Make a function that sums two numbers</p>
                             <pre>
@@ -57,6 +65,131 @@
                                     console.log(sum(10, 11)); // Output is 21
                                 </code>
                             </pre>
+                        </div>
+
+                        <h4 class="mt-5">Function Hoisting</h4>
+                        <p class="mt-3">
+                            Hoisting in JavaScript, is the behaviour where declarations are
+                            moved to the top of the current <b>scope</b>.
+                        </p>
+                        <p>
+                            Declarations of functions are hoisted. Hence, functions can be called
+                            before they are declared
+                        </p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <pre>
+                                <code class="language-javascript">
+                                    console.log(sum(4, 10)); // Output 14
+
+                                    function sum(x, y) {
+                                        return x + y;
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5">Parameters & Arguments</h4>
+                        <p>
+                            There are parameter rules which govern the behaviour of functions:
+                        </p>
+                        <ol>
+                            <li>JavaScript function definitions do not specify data types for parameters.</li>
+                            <li>JavaScript functions do not perform type checking on the passed arguments.</li>
+                            <li>JavaScript functions do not check the number of arguments received.</li>
+                        </ol>
+                        <p>You can see the behaviour of rule 3:</p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    function test(x, y) {
+                                        return x + y;
+                                    }
+
+                                    console.log(test(10, 5, 6, 1)); // Still outputs 15
+                                    // It ignores the other parameters passed
+                                    // No errors thrown
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5">Pass by Value & Reference</h4>
+                        <p>
+                            The parameters (arguments) are passed by value. When you all a function 
+                            and give it arguments, the function receives a copy of those values, 
+                            not the original variables themselves.
+                        </p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Examples
+                            </h5>
+                            <p class="my-0"><b>Scenario 1</b>: Pass By Value (Primitive Values)</p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                function changeValue(x) {
+                                    x = 100; // modifies only the local copy
+                                }
+
+                                let num = 50;
+                                changeValue(num);
+                                console.log(num); // still 50, not 100
+                                </code>
+                            </pre>
+                            <p>
+                                Note: Explanation: num is 50. When calling changeValue(num), 
+                                the value 50 is copied into x. Changing x does not touch num.
+                            </p>
+
+                            <p class="my-0"><b>Scenario 2</b>: Pass By Reference (Objects & Arrays)</p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    function modifyObject(obj) {
+                                        obj.name = "Alice";   // modifies the original object
+                                    }
+
+                                    const person = { name: "Bob" };
+                                    modifyObject(person);
+                                    console.log(person.name); // "Alice"
+
+                                </code>
+                            </pre>
+                            <p>
+                                Note: Objects are still passed by value, but here the value is a reference 
+                                (the memory address of the object).
+                            </p>
+                            <p>
+                                So the function gets a copy of the reference — both 
+                                point to the same object in memory.
+                            </p>
+                            <p>
+                                This means if you modify the object’s contents, 
+                                the original will change, because both references 
+                                point to the same location.
+                            </p>
+
+                            <p class="my=0"><b>Scenario 3</b>: Reassigning Objects</p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    function reassignObject(obj) {
+                                        // just reassigns the local copy of the reference
+                                        obj = { name: "Charlie" };  
+                                    }
+
+                                    const person = { name: "Bob" };
+                                    reassignObject(person);
+                                    console.log(person.name); // still "Bob"
+                                </code>
+                            </pre>
+                            <p>
+                                Note: However if you reassign the parameter to a new object, 
+                                it won’t affect the original.
+                            </p>
+
                         </div>
 
                         <h2 class="fw-bold mt-5">

@@ -2,30 +2,7 @@
 
 /* Links
 
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-crossorigin="anonymous"></link>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
-crossorigin="anonymous"></script>
 */
-
-// Add Bootstrap CSS
-const bootstrapCSS = document.createElement('link');
-bootstrapCSS.rel = 'stylesheet';
-bootstrapCSS.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';
-bootstrapCSS.integrity = 'sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB';
-bootstrapCSS.crossOrigin = 'anonymous';
-document.head.appendChild(bootstrapCSS);
-
-// Add Bootstrap Icons
-const bootstrapIcon = document.createElement('link');
-bootstrapIcon.rel = 'stylesheet';
-bootstrapIcon.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css';
-document.head.appendChild(bootstrapIcon);
 
 // Global flags and callback queue to know when Bootstrap JS is loaded
 window.bootstrapLoaded = false;
