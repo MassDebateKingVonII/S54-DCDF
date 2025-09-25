@@ -1,7 +1,7 @@
 (function () {
     const head = document.head;
 
-    // 🔧 Small helper for meta
+    // 🔧 Meta helper
     function addMeta(name, content, attrType = "name") {
         const meta = document.createElement("meta");
         meta.setAttribute(attrType, name);
@@ -15,6 +15,14 @@
         link.rel = "preconnect";
         link.href = href;
         if (opts.crossOrigin) link.crossOrigin = opts.crossOrigin;
+        head.appendChild(link);
+    }
+
+    // 🔧 DNS prefetch fallback
+    function addDNSPrefetch(href) {
+        const link = document.createElement("link");
+        link.rel = "dns-prefetch";
+        link.href = href;
         head.appendChild(link);
     }
 
@@ -51,14 +59,25 @@
         head.appendChild(s);
     }
 
-    // 1️⃣ Meta tags
+    // 1️⃣ Meta
     addMeta("UTF-8", "", "charset");
     addMeta("viewport", "width=device-width, initial-scale=1");
 
-    // 2️⃣ Preconnect to CDN (DNS + TCP + TLS warmup)
-    addPreconnect("https://cdn.jsdelivr.net", { crossOrigin: "anonymous" });
+    // 2️⃣ Preconnect / DNS Prefetch
+    const cdn = "https://cdn.jsdelivr.net";
+    addPreconnect(cdn, { crossOrigin: "anonymous" });
+    addDNSPrefetch(cdn);
 
-    // 3️⃣ CSS (Bootstrap first, then your own)
+    // 3️⃣ Favicon (preload + normal)
+    const faviconHref = "/favicon.ico";
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/x-icon";
+    favicon.href = faviconHref;
+    head.appendChild(favicon);
+    addPreload(faviconHref, "image");
+
+    // 4️⃣ CSS
     const bootstrapCSS = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css";
     addPreload(bootstrapCSS, "style", { crossOrigin: "anonymous" });
     addCSS(bootstrapCSS, {
@@ -82,51 +101,40 @@
         addCSS(href);
     });
 
-    // 4️⃣ Bootstrap JS setup with preload + global callback system
+    // 5️⃣ Bootstrap JS setup
     const bootstrapJS = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js";
     addPreload(bootstrapJS, "script", { crossOrigin: "anonymous" });
 
     window.bootstrapLoaded = false;
     window.bootstrapReadyCallbacks = [];
 
-    window.runWhenBootstrapReady = function (fn) {
-        if (window.bootstrapLoaded) {
-            fn();
-        } else {
-            window.bootstrapReadyCallbacks.push(fn);
-        }
+    window.runWhenBootstrapReady = function(fn) {
+        if (window.bootstrapLoaded) fn();
+        else window.bootstrapReadyCallbacks.push(fn);
     };
 
     addScript(bootstrapJS, {
-        defer: false, // load ASAP
+        defer: false,
         integrity: "sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI",
         crossOrigin: "anonymous",
         onload: () => {
             window.bootstrapLoaded = true;
 
-            // Define and run tooltip/popover init
-            window.initPopups = function () {
-                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-                    new bootstrap.Tooltip(el);
-                });
-                document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
-                    new bootstrap.Popover(el, { trigger: "hover" });
-                });
+            // Initialize tooltips/popovers
+            window.initPopups = function() {
+                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+                document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el, { trigger: "hover" }));
             };
             window.initPopups();
 
-            // Flush queued callbacks
+            // Run queued callbacks
             window.bootstrapReadyCallbacks.forEach(cb => {
-                try {
-                    cb();
-                } catch (e) {
-                    console.error("Bootstrap callback error:", e);
-                }
+                try { cb(); } catch(e) { console.error("Bootstrap callback error:", e); }
             });
         }
     });
 
-    // 5️⃣ Your custom scripts (preload + load later)
+    // 6️⃣ Your custom scripts (preload + load)
     const scripts = [
         "/assets/js/general/injectNavbar.js",
         "/assets/js/general/injectFooter.js",
@@ -137,16 +145,30 @@
         addScript(src);
     });
 
-    // 6️⃣ Prism (only inject if missing)
+    // 7️⃣ Prism (preload + load)
     const prismJS = "/assets/js/general/prism.js";
     addPreload(prismJS, "script");
 
     if (!window.Prism) {
         addScript(prismJS, {
             defer: true,
-            onload: () => Prism.highlightAll()
+            onload: () => {
+                Prism.highlightAll();
+                document.querySelectorAll("pre code").forEach(code => {
+                    code.setAttribute("data-prismjs-copy", "📋");
+                    code.setAttribute("data-prismjs-copy-success", "✅");
+                    code.setAttribute("data-prismjs-copy-error", "❌");
+                    code.setAttribute("data-prismjs-copy-timeout", "2000");
+                });
+            }
         });
     } else {
         Prism.highlightAll();
+        document.querySelectorAll("pre code").forEach(code => {
+            code.setAttribute("data-prismjs-copy", "📋");
+            code.setAttribute("data-prismjs-copy-success", "✅");
+            code.setAttribute("data-prismjs-copy-error", "❌");
+            code.setAttribute("data-prismjs-copy-timeout", "2000");
+        });
     }
 })();
