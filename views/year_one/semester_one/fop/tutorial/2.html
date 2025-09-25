@@ -52,6 +52,7 @@
         <script src="/assets/js/general/prism.js"></script>
         <!-- Footer + Navbar -->
         <script src="/assets/js/general/injectNavFooter.js" defer></script>
+        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
 
         <!-- 7. Favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -866,157 +867,159 @@
                                     </ol>
 
                                     <h4>Q2)</h4>
-                                    <table class="table table-bordered table-striped table-hover align-middle">
-                                        <thead class="table-dark">
-                                            <tr>
-                                                <th class="w-10"></th>
-                                                <th class="w-70">Program</th>
-                                                <th class="w-20">Output</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>(a)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                        console.log(5 * 20 + 7 % 6);
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                            101
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>(b)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log("FOP" + "is" +"fun!");;
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        FOPisfun!
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>(c)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log(1 + "abcd");
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        1abcd
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>(d)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log("abcd " + 1);
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        abcd 1
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-hover align-middle">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th class="w-10"></th>
+                                                    <th class="w-70">Program</th>
+                                                    <th class="w-20">Output</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>(a)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                            console.log(5 * 20 + 7 % 6);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                                101
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(b)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log("FOP" + "is" +"fun!");;
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            FOPisfun!
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(c)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log(1 + "abcd");
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            1abcd
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>(d)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log("abcd " + 1);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            abcd 1
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>(e)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log(5 + 4 + " abcd ");
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        9 abcd
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>(e)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log(5 + 4 + " abcd ");
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            9 abcd
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>(f)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log(1 + " abcd " + 1);
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        1 abcd 1
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>(f)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log(1 + " abcd " + 1);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            1 abcd 1
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>(g)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log("abcd " + 1 + 1);
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        abcd 11
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td>(g)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log("abcd " + 1 + 1);
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            abcd 11
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>(g)</td>
-                                                <td>
-                                                    <pre class="line-numbers">
-                                                        <code class="language-javascript">
-                                                            console.log(1 + "ab" + (1+1));
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                                <td>
-                                                    <pre>
-                                                        <code class="language-bash">
-                                                        1ab2
-                                                        </code>
-                                                    </pre>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                <tr>
+                                                    <td>(g)</td>
+                                                    <td>
+                                                        <pre class="line-numbers">
+                                                            <code class="language-javascript">
+                                                                console.log(1 + "ab" + (1+1));
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>
+                                                            <code class="language-bash">
+                                                            1ab2
+                                                            </code>
+                                                        </pre>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
                                     <h4>Q3)</h4>
                                     <ol class="letter-list">

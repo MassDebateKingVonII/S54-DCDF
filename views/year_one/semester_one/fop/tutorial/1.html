@@ -50,6 +50,8 @@
 
         <!-- Code Highlighting -->
         <script src="/assets/js/general/prism.js"></script>
+        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+
         <!-- Footer + Navbar -->
         <script src="/assets/js/general/injectNavFooter.js" defer></script>
 
@@ -300,16 +302,16 @@
                                         */
 
                                         // (a)
-                                        console.log("The quick brown fox jumps over the lazy dog.");
+                                        console.log(`The quick brown fox
+                                            jumps over the
+                                        lazy dog`);
 
-                                        // (b) 
-                                        console.log(
-                                        `/----\
-                                        | .  . |
-                                        |  \/  |
-                                        \------/`
-                                        );
-
+                                        // (b)
+                                        console.log(` ____
+                                        /.  .\\
+                                        | \\/ |
+                                        \\____/
+                                        `);
 
                                         // (c)
                                         console.log("I've tried so hard and got so far and in the end it doesn't even matter.");
@@ -610,19 +612,19 @@
                                     <h4>Q6)</h4>
                                     <pre class="line-numbers">
                                         <code class="language-javascript">
-                                            /*
-                                            ==============================
-                                            Question 6
-                                            ==============================
-                                            */
+                                        /*
+                                        ==============================
+                                        Question 6
+                                        ==============================
+                                        */
 
-                                            console.log(
-                                            `Module Code\\Name: ST0523\\"Fundamentals of Programming"
-                                            CA 1 :40%
-                                            CA 2 :20%
-                                            EXAM :40%
-                                            Total---------->:100%`
-                                            );
+                                        console.log(
+                                        `Module Code\\Name: ST0523\\"Fundamentals of Programming"
+                                        CA 1 :\t\t\t 40%
+                                        CA 2 :\t\t\t 20%
+                                        EXAM :\t\t\t 40%
+                                        Total---------->:100%`
+                                        );
                                         </code>
                                     </pre>
                                 </div>

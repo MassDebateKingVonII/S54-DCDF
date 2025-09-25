@@ -4,19 +4,21 @@
     const navbarHTML = `
     <nav id="mainNavbar" class="navbar navbar-expand-lg container-fluid border-bottom border-2 border-light" style="background-color: rgba(19, 149, 2, 1);">
         <div class="container-xxl">
-            <div class="navbar-brand w-25">
+            <div class="navbar-brand d-flex align-items-center gap-2 w-25">
                 <a href="/">
                     <img src="/assets/images/icons/logo.png"
                         alt="Mass Debater Hacker"
                         class="rounded-circle"
                         style="width: 64px; height: 64px;">
                 </a>
-                <a href="/">
+                <a href="/" class="d-none d-md-block">
                     <img src="/assets/images/icons/logo-text.png"
-                        alt="Mass Debate "
-                        style="width: 160px; height: 64px;">
+                        alt="Mass Debate"
+                        class="img-fluid"
+                        style="max-width: 160px; height: auto;">
                 </a>
             </div>
+
 
             <div class="d-flex align-items-center gap-2">
                 <!-- New Chapters button for mobile -->
