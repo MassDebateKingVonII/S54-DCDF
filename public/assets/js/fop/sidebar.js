@@ -1,5 +1,4 @@
-// /assets/js/fop/navigation.js
-
+// /assets/js/fop/sidebar.js
 
 document.getElementById("fop-sidebar").classList.add(
     "col-md-3",

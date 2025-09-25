@@ -18,9 +18,16 @@
                 </a>
             </div>
 
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center gap-2">
+                <!-- New Chapters button for mobile -->
+                <div id="module-sidebar">
+                </div>
+
+                <!-- Hamburger Icon -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <!-- Single collapse container with all nav content -->
             <div class="collapse navbar-collapse" id="navbar-menu">
