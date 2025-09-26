@@ -1,9 +1,9 @@
 // /assets/js/foc/renderSidebarMobile.js
 
-// Module data for FOP
+// Module data for FOC
 const focMobileModule = {
     title: "ST2413 - FOC",
-    banner: "/assets/images/foc/banner.png",
+    banner: "/assets/images/foc/banner.jpg",
     offcanvasId: "offcanvasMobileNav",
     tutorialPrefix: "/foc/tut/",
     menu: [

@@ -14,10 +14,10 @@ function renderMobileSidebar(moduleData) {
     if (window.innerWidth < 992 && !moduleSidebarButton.querySelector("button")) {
         // Button
         moduleSidebarButton.innerHTML = `
-      <button type="button" class="btn d-lg-none ms-2" data-bs-toggle="offcanvas" 
+        <button type="button" class="btn d-lg-none ms-2" data-bs-toggle="offcanvas" 
         data-bs-target="#${offcanvasId}" aria-controls="${offcanvasId}">
-        <i class="bi bi-folder-plus"></i> Chapters
-      </button>
+            <i class="bi bi-folder-plus"></i> Chapters
+        </button>
     `;
 
         // Offcanvas
@@ -29,7 +29,7 @@ function renderMobileSidebar(moduleData) {
             </div>
             <div class="offcanvas-body p-0">
                 <a class="navbar-brand w-100 text-center mb-3" href="#">
-                    <img src="${banner}" class="img-fluid">
+                    <img src="${banner}" class="img-fluid w-100">
                     <h3 class="mt-2">${title}</h3>
                 </a>
                 <div class="nav flex-column nav-pills w-100">

@@ -21,7 +21,7 @@ function renderSidebar(moduleData) {
 	const sidebarHTML = `
 	<div id="left-navbar-navigation" class="bg-light position-sticky top-0 p-2">
 		<a class="navbar-brand w-100 text-center mb-3" href="#">
-			<img src="${banner}" class="img-fluid">
+			<img src="${banner}" class="img-fluid w-100">
 			<h3 class="mt-2">${title}</h3>
 		</a>
 	<div class="nav flex-column nav-pills w-100" role="tablist">
