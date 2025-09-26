@@ -57,7 +57,7 @@ app.get("/year1/sem2/", (req, res) => {
 // FOP
 app.get("/fop/:page", (req, res) => {
     const page = req.params.page;
-    const validPages = ["intro", "tut", "notes", "papers", "credits"];
+    const validPages = ["intro", "tut", "papers", "references"];
 
     if (validPages.includes(page)) {
         res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "fop", `${page}.html`));
@@ -81,7 +81,7 @@ app.get("/fop/tut/:tutorialNo", (req, res) => {
 // FOC
 app.get("/foc/:page", (req, res) => {
     const page = req.params.page;
-    const validPages = ["intro", "tut", "notes", "papers", "credits"];
+    const validPages = ["intro", "tut", "notes", "papers", "references"];
 
     if (validPages.includes(page)) {
         res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "foc", `${page}.html`));
@@ -89,6 +89,15 @@ app.get("/foc/:page", (req, res) => {
         res.status(404).json({
             message: "Not Found"
         })
+    }
+});
+
+app.get("/fop/tut/:tutorialNo", (req, res) => {
+    const tutorialNo = req.params.tutorialNo;
+    const validtutorialNo = ["1", "1A", "2", "3", "4", "5", "6", "7", "8", "9A", "9B", "10"];
+
+    if (validtutorialNo.includes(tutorialNo)) {
+        res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "fop", "tutorial", `${tutorialNo}.html`));
     }
 });
 

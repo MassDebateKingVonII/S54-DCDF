@@ -23,9 +23,8 @@ const fopMobileModule = {
                 { label: "8 - Array Of Objects", href: "/fop/tut/8" },
             ]
         },
-        { type: "link", label: "Special Notes", href: "/fop/notes" },
         { type: "link", label: "Mock Papers", href: "/fop/papers" },
-        { type: "link", label: "References & Credits", href: "/fop/credits" },
+        { type: "link", label: "References & Additional Resources", href: "/fop/references" },
     ],
 };
 
