@@ -81,7 +81,7 @@ app.get("/fop/tut/:tutorialNo", (req, res) => {
 // FOC
 app.get("/foc/:page", (req, res) => {
     const page = req.params.page;
-    const validPages = ["intro", "tut", "notes", "papers", "references"];
+    const validPages = ["intro", "tut", "papers", "projects", "references"];
 
     if (validPages.includes(page)) {
         res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "foc", `${page}.html`));
@@ -92,12 +92,12 @@ app.get("/foc/:page", (req, res) => {
     }
 });
 
-app.get("/fop/tut/:tutorialNo", (req, res) => {
+app.get("/foc/tut/:tutorialNo", (req, res) => {
     const tutorialNo = req.params.tutorialNo;
-    const validtutorialNo = ["1", "1A", "2", "3", "4", "5", "6", "7", "8", "9A", "9B", "10"];
+    const validtutorialNo = ["1A", "1B", "2", "3", "4", "5", "6", "7", "8", "9A", "9B", "10"];
 
     if (validtutorialNo.includes(tutorialNo)) {
-        res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "fop", "tutorial", `${tutorialNo}.html`));
+        res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "foc", "tutorial", `${tutorialNo}.html`));
     }
 });
 

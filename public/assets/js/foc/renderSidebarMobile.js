@@ -29,6 +29,7 @@ const focMobileModule = {
             ]
         },
         { type: "link", label: "Mock Papers", href: "/foc/papers" },
+        { type: "link", label: "Projects", href: "/foc/projects" },
         { type: "link", label: "References & Additional Resources", href: "/foc/references" },
     ],
 };

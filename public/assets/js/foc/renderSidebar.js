@@ -26,6 +26,7 @@ const fopModule = {
             ],
         },
         { type: "link", label: "Mock Papers", href: "/foc/papers" },
+        { type: "link", label: "Projects", href: "/foc/projects" },
         { type: "link", label: "References & Resources", href: "/foc/references" },
     ],
 };
