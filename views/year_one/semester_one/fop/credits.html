@@ -62,10 +62,11 @@
         <!-- Custom CSS -->
          
         <!-- Custom JS -->
-        <script src="/assets/js/fop/sidebar.js" defer></script>
-        <script src="/assets/js/fop/sidebar_mobile.js" defer></script>
+        <script src="/assets/js/utils/sidebar.js" defer></script>
+        <script src="/assets/js/utils/sidebar_mobile.js" defer></script>
 
-        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+        <script src="/assets/js/fop/renderSidebar.js" defer></script>
+        <script src="/assets/js/fop/renderSidebarMobile.js" defer></script>
 
     </head>
     <body>
@@ -74,7 +75,7 @@
             <div class="container-lg">
                 <div class="row mt-3">
                     <!-- Left side navigation -->
-                    <div id="fop-sidebar"></div>
+                    <div id="sidebar"></div>
 
                     <div class="col-lg-9 col-md-12 col-sm-12 mt-3 mb-5">
                         <h2 class="fw-bold">
@@ -106,19 +107,22 @@
                                 <div class="container w-75 mx-auto">
                                     <div class="row gx-2">
                                         <div class="col-4">
-                                            <a href="https://github.com/MassDebateKingVonII" target="a_blank" 
+                                            <a href="https://github.com/MassDebateKingVonII" 
+                                            target="a_blank" 
                                             class="text-decoration-none text-black w-100">
                                                 <img src="/assets/images/icons/github.png" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="https://discordapp.com/users/1181181203768950834"
+                                            <a href="https://discordapp.com/users/1181181203768950834" 
+                                            target="a_blank"
                                             class="text-decoration-none text-black w-100">
                                                 <img src="/assets/images/icons/discord.png" class="img-fluid">
                                             </a>
                                         </div>
                                         <div class="col-4">
-                                            <a href="https://www.reddit.com/user/Desperate_Cancel9312/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button"
+                                            <a href="https://www.reddit.com/user/Desperate_Cancel9312/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" 
+                                            target="a_blank"
                                             class="text-decoration-none text-black w-100">
                                                 <img src="/assets/images/icons/reddit.png" class="img-fluid">
                                             </a>

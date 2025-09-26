@@ -22,7 +22,7 @@
 
             <div class="d-flex align-items-center gap-2">
                 <!-- New Chapters button for mobile -->
-                <div id="module-sidebar">
+                <div id="module-mobile-sidebar">
                 </div>
 
                 <!-- Hamburger Icon -->

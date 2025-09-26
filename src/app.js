@@ -32,6 +32,17 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "views", "index.html"));
 });
 
+// Settings Page
+app.get("/settings", (req, res) => {
+    try {
+        res.sendFile(path.join(__dirname, "..", "views", "settings", "main.html"));
+    } catch (error) {
+        return res.status(404).json({
+            message: "Not found"
+        })
+    }
+});
+
 // Year 1, Sem 1
 app.get("/year1/sem1/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "views", "year_one", "semester_one", "navigation.html"));
