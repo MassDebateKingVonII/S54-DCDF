@@ -49,8 +49,7 @@
         <!-- 6. Necessary Scripts -->
 
         <!-- Code Highlighting -->
-        <script src="/assets/js/general/prism.js"></script>
-        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+        <script src="/assets/js/utils/prism.js"></script>
 
         <!-- Footer + Navbar -->
         <script src="/assets/js/general/injectNavFooter.js" defer></script>
@@ -65,6 +64,9 @@
         <!-- Custom JS -->
         <script src="/assets/js/fop/sidebar.js" defer></script>
         <script src="/assets/js/fop/sidebar_mobile.js" defer></script>
+
+        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+
 
     </head>
     <body>
@@ -181,9 +183,61 @@
                                 // [1, "string"]
                                 console.log(test.length) // Now output is 2
 
+                                // Gets the index of an element
+                                console.log(test.indexOf("string")) // Output 1
+
                             </code>
                         </pre>
                         <p class="mt-3">A complete reference can be found <a href="https://www.w3schools.com/js/js_array_reference.asp">here</a>. This list have additional methods that will not come out for the exam.</p>
+
+
+                        <h4 class="mt-5">Reference Type</h4>
+                        <p>
+                            When arrays when they are stored into another variable, they are
+                            simply making a reference to it. If the original array changes, the 
+                            other variable referncing to it will also reflect the change. It is <b>NOT A
+                            COPY!</b>
+                        </p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const arr1 = [1, 2, 3];
+                                    const arr2 = arr1; // arr2 is a reference to arr1
+
+                                    arr2.push(4);
+
+                                    console.log(arr1); // [1, 2, 3, 4]
+                                    console.log(arr2); // [1, 2, 3, 4]
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h4 class="mt-5">Shallow Copy</h4>
+                        <p>
+                            If you want to make a copy (not a reference), 
+                            you can use a spread operator <code>[...arrName]</code>
+                        </p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-tools"></i> Syntax
+                            </h5>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const arr1 = [1, 2, [3, 4]];
+                                    const arr2 = [...arr1]; // shallow copy
+
+                                    arr2[0] = 99;         // only arr2 changes
+                                    arr2[2][0] = 100;     // affects both
+
+                                    console.log(arr1); // [1, 2, [100, 4]]
+                                    console.log(arr2); // [99, 2, [100, 4]]
+
+                                </code>
+                            </pre>
+                        </div>
 
                         <!-- Practical -->
 

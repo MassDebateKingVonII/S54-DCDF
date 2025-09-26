@@ -49,8 +49,7 @@
         <!-- 6. Necessary Scripts -->
 
         <!-- Code Highlighting -->
-        <script src="/assets/js/general/prism.js"></script>
-        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+        <script src="/assets/js/utils/prism.js"></script>
 
         <!-- Footer + Navbar -->
         <script src="/assets/js/general/injectNavFooter.js" defer></script>
@@ -65,6 +64,8 @@
         <!-- Custom JS -->
         <script src="/assets/js/fop/sidebar.js" defer></script>
         <script src="/assets/js/fop/sidebar_mobile.js" defer></script>
+
+        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
 
     </head>
     <body>
@@ -81,7 +82,61 @@
                             <i class="bi bi-mortarboard-fill"></i> Tutorial 8 - Array Of Objects
                         </h2>
                         <hr>
+                        <h3>
+                            <i class="bi bi-binoculars-fill"></i> Overview
+                        </h3>
+                        <p>
+                            In this section, you will learn how to combine the usage of arrays and objects.
+                            An array of objects is useful since it can group multiple objects under one collection
+                            or one name.
+                        </p>
+                        <h4>Declaring Array Of Objects</h4>
+                        <p>
+                            Declaring an array of objects means you 
+                            create an array in which each element is an object.
+                        </p>
+                        <p>When it is useful:</p>
+                        <ul>
+                            <li>
+                                When you need to store multiple items that share the same properties, 
+                                e.g., users, products, books, etc.
+                            </li>
 
+                            <li>
+                                When you want to organize related data together instead 
+                                of keeping separate arrays for each property.
+                            </li>
+
+                            <li>
+                                When you plan to iterate (loop) through the data, search, filter, 
+                                or sort based on object properties.
+                            </li>
+                        </ul>
+                            Common in scenarios like:
+
+                            A shopping cart with many products.
+
+                            A student database with names, IDs, and grades.
+
+                            A contact list with phone numbers and emails.
+</p>
+                        <div class="px-3">
+                            <h5>
+                                <i class="bi bi-bookmark-check-fill"></i> Example
+                            </h5>
+                            <p class="mb-0"><b>Scenario</b>: Create an array to group multiple objects of students</p>
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const students = [
+                                        { name: "Alice", age: 20 },
+                                        { name: "Bob", age: 22 },
+                                        { name: "Charlie", age: 21 }
+                                    ];
+
+                                    console.log(students[1].name); // "Bob"
+                                </code>
+                            </pre>
+                        </div>
 
 
                         <h2 class="fw-bold mt-5">

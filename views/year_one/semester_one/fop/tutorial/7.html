@@ -49,8 +49,7 @@
         <!-- 6. Necessary Scripts -->
 
         <!-- Code Highlighting -->
-        <script src="/assets/js/general/prism.js"></script>
-        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
+        <script src="/assets/js/utils/prism.js"></script>
 
         <!-- Footer + Navbar -->
         <script src="/assets/js/general/injectNavFooter.js" defer></script>
@@ -65,6 +64,8 @@
         <!-- Custom JS -->
         <script src="/assets/js/fop/sidebar.js" defer></script>
         <script src="/assets/js/fop/sidebar_mobile.js" defer></script>
+
+        <script src="/assets/js/general/customCodeHighlight.js" defer></script>
 
     </head>
     <body>
@@ -377,6 +378,62 @@
                             <p>Note: The <code>this.name</code> refers to the user1 object.</p>
                         </div>
 
+                        <h4 class="mt-5">Reference Type</h4>
+                        <p>
+                            Objects are not pass by value but rather, passed by reference. This means that:
+                        </p>
+                        <ul>
+                            <li>
+                                When you assign one array to another variable, 
+                                both variables point to the same memory location.
+                            </li>
+                            <li>
+                                Changing the contents of the array through one 
+                                variable also affects the other.
+                            </li>
+                        </ul>
+                        <div class="px-3">
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const obj1 = { name: "Alice" };
+                                    const obj2 = obj1;   // obj2 references the same object as obj1
+
+                                    obj2.name = "Bob";
+
+                                    console.log(obj1.name); // "Bob"
+                                    console.log(obj2.name); // "Bob"
+                                </code>
+                            </pre>
+                            <p>
+                                Note: Both obj1 and obj2 reflect the change because 
+                                they point to the same object in memory.
+                            </p>
+                        </div>
+
+                        <h4 class="mt-5">Shallow Copy</h4>
+                        <p>Top-level elements are copied, <b>nested objects/arrays</b> are still shared by reference.</p>
+                        <div class="px-3">
+                            <pre class="line-numbers">
+                                <code class="language-javascript">
+                                    const original = {
+                                        name: "Alice",
+                                        scores: [90, 85]
+                                    };
+
+                                    // Shallow copy
+                                    const copy = { ...original };
+
+                                    copy.name = "Bob";           // only affects copy
+                                    copy.scores.push(100);       // affects both!
+
+                                    console.log(original.name);   // "Alice"
+                                    console.log(copy.name);       // "Bob"
+
+                                    console.log(original.scores); // [90, 85, 100] changed
+                                    console.log(copy.scores);     // [90, 85, 100]
+                                </code>
+                            </pre>
+                        </div>
 
                         <h2 class="fw-bold mt-5">
                             <i class="bi bi-receipt-cutoff"></i> Practical 7 - Object Literals And Methods
