@@ -14,7 +14,7 @@ function renderStars(rating) {
     return starsHTML;
 }
 
-function renderModules() {
+function renderModules(modules) {
     const container = document.getElementById('modules-list-container');
     container.innerHTML = modules.map(module => `
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -47,5 +47,3 @@ function renderModules() {
         </div>
     `).join('');
 }
-
-renderModules();

@@ -4,15 +4,18 @@ const app = express();
 
 require('dotenv').config();
 
-/*
 const mainRoutes = require('./routes/mainRoutes.js');
-const jwtMiddleware = require('./middleware/auth/jwtMiddleware.js');
-const cronMiddleware = require('./middleware/cronMiddleware.js');
-
-*/
+// const jwtMiddleware = require('./middleware/auth/jwtMiddleware.js');
+// const cronMiddleware = require('./middleware/cronMiddleware.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+//////////////////////////////////////////////////////
+// PROTECT API ROUTES (UNCHANGED)
+//////////////////////////////////////////////////////
+
+app.use('/api', mainRoutes);
 
 //////////////////////////////////////////////////////
 // STATIC ACCESS CONTROL SETUP
