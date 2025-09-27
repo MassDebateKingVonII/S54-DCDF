@@ -1,9 +1,14 @@
-#loading-spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    /* optional, gives vertical centering space */
+}
 
+#loading-spinner {
+    position: relative;
+    /* stays in normal flow */
     border: 6px solid #f3f3f3;
     /* Light gray */
     border-top: 6px solid #3498db;

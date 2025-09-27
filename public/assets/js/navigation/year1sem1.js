@@ -3,8 +3,12 @@
 
 // Insert spinner right away
 const container = document.getElementById("modules-list-container");
-container.style.position = "relative"; // so spinner can center
-container.innerHTML = `<div id="loading-spinner"></div>`;
+container.innerHTML = `
+  <div class="loading-wrapper">
+    <div id="loading-spinner"></div>
+  </div>
+`;
+
 
 const callbackForYear1Sem1Mods = (responseStatus, responseData) => {
     const spinner = document.getElementById("loading-spinner");
